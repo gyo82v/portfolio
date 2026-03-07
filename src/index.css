@@ -5,47 +5,44 @@
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
+
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Set box sizing for everything */
   * {
     box-sizing: border-box;
   }
+
   *::before,
   *::after {
     box-sizing: border-box;
   }
 
-  /* Apply custom styles to html, body, and the root element */
   html, body, #root {
-    @apply min-h-screen m-0 p-0;
-    line-height: 1.5;
-    font-weight: 400;
+    @apply min-h-screen m-0 p-0
+           bg-slate-50 text-slate-900
+           dark:bg-slate-900 dark:text-slate-100;
+
     scroll-behavior: smooth;
-    /* Hide scrollbar (Firefox and IE) */
+
+    /* Hide scrollbar (Firefox / IE) */
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
 
-  /* Hide scrollbar for WebKit */
   html::-webkit-scrollbar,
   body::-webkit-scrollbar {
     display: none;
   }
 
-  /* Ensure images and buttons behave as expected */
   img {
     @apply max-w-full h-auto;
   }
+
   button {
     @apply cursor-pointer;
   }
 }
-
-@layer utilities {}
-
-@layer components {}
