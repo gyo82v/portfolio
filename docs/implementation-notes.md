@@ -1,0 +1,12 @@
+- [Content] [Home] add an header section with links;
+- [Content] [Home] add a footer section with links to socials;
+- [Content] [Home] add a projects slider in the home page for desktop screens;
+- [Content] [Home] add a static projects section in the home page for mobile screens;
+- [Content] [Home] add an about me section in the home page with a description , resume link etc...
+- [Content] [Home] add a Contacts section in the home page with my contacts like email, phone etc..
+- [Content] [Home] add a Hero section to the home page, with a title , an image etc..
+- [Content] [Home] add a skills section in the home page
+- [Content] [Resume] add a /resume page with just the resume in, (PDF embed + HTML resume + download)
+- [Content] [projects] add a /projects page that will display all of my projects
+- [Content] add a darkmode in the header
+- [Content] add a language switch in the header english/italian

@@ -1,48 +1,54 @@
 @import "tailwindcss";
 
+/* base styles (NO variants here) */
 @layer base {
   :root {
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
-
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
   }
 
   * {
     box-sizing: border-box;
   }
 
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-
   html, body, #root {
-    @apply min-h-screen m-0 p-0
-           bg-slate-50 text-slate-900
-           dark:bg-slate-900 dark:text-slate-100;
-
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
     scroll-behavior: smooth;
-
-    /* Hide scrollbar (Firefox / IE) */
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  html::-webkit-scrollbar,
-  body::-webkit-scrollbar {
-    display: none;
   }
 
   img {
-    @apply max-w-full h-auto;
+    max-width: 100%;
+    height: auto;
   }
 
   button {
-    @apply cursor-pointer;
+    cursor: pointer;
   }
 }
+
+/* utilities layer = variants are allowed */
+@layer utilities {
+  html, body, #root {
+    @apply bg-slate-50  transition-colors duration-200;
+  }
+
+  .dark html,
+  .dark body,
+  .dark #root {
+    @apply bg-slate-800 
+  }
+}
+
+
+
+/*
+@import "tailwindcss/theme" layer(theme);
+@import "tailwindcss/preflight" layer(base);
+@import "tailwindcss/utilities" layer(utilities);
+
+
+
+*/
