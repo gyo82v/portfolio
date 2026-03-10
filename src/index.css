@@ -1,54 +1,62 @@
+/* src/styles/index.css */
 @import "tailwindcss";
 
-/* base styles (NO variants here) */
+/* Tailwind v4: define the dark variant (CSS-first) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------------- BASE (resets & base tokens) ---------------- */
 @layer base {
   :root {
+    /* brand accent tokens (change once for all app) */
+    --accent: theme('colors.teal.600');
+    --accent-foreground: theme('colors.teal.400');
+
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
   }
-
-  * {
-    box-sizing: border-box;
+  /* dark */
+  :where(.dark) :root {
+    --accent: theme('colors.teal.400');
+    --accent-foreground: theme('colors.black');
   }
+
+  * { box-sizing: border-box; }
+  *::before, *::after { box-sizing: border-box; }
 
   html, body, #root {
     min-height: 100%;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+
+    /* light-mode defaults (safe to put here) */
+    @apply bg-slate-50 text-slate-900;
   }
 
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  button {
-    cursor: pointer;
-  }
+  img { max-width: 100%; height: auto; }
+  button { cursor: pointer; }
 }
 
-/* utilities layer = variants are allowed */
+/* ---------------- UTILITIES (variants & global dark overrides) ---------------- */
 @layer utilities {
-  html, body, #root {
-    @apply bg-slate-50  transition-colors duration-200;
+  /* Page-level dark overrides: these selectors are explicit and guaranteed to be emitted */
+  :where(.dark) html,
+  :where(.dark) body,
+  :where(.dark) #root {
+    @apply bg-slate-800 text-slate-100;
   }
 
-  .dark html,
-  .dark body,
-  .dark #root {
-    @apply bg-slate-800 
+  /* Optional: change accent variable in dark mode */
+  :where(.dark) :root {
+    /* If you want to use CSS variables for accents; requires using style attr where needed */
+    --accent: theme('colors.teal.400');
+  }
+  .bg-accent { background-color: var(--accent); }
+  .text-accent { color: var(--accent); }
+  .border-accent { border-color: var(--accent); }
+  .btn-accent {
+    background-color: var(--accent);
+    color: var(--accent-foreground);
   }
 }
-
-
-
-/*
-@import "tailwindcss/theme" layer(theme);
-@import "tailwindcss/preflight" layer(base);
-@import "tailwindcss/utilities" layer(utilities);
-
-
-
-*/
