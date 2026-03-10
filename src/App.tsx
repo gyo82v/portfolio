@@ -4,6 +4,7 @@ import Resume from "./pages/Resume"
 import Projects from "./pages/Projects"
 import Layout from "./layout/Layout"
 import ThemeProvider from './theme/ThemeProvider';
+import LanguageProvider  from "./i18n/LanguageProvider"
 
 function App() {
   const router = createBrowserRouter(createRoutesFromElements(
@@ -19,9 +20,11 @@ function App() {
 
   return (
     <ThemeProvider>
-      <div className="flex flex-col min-h-screen transition-colors duration-200">
-        <RouterProvider router={router} />
-      </div>
+      <LanguageProvider>
+        <div className="flex flex-col min-h-screen transition-colors duration-200">
+          <RouterProvider router={router} />
+        </div>
+      </LanguageProvider>
     </ThemeProvider>
 
   )
