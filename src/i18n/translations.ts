@@ -1,3 +1,4 @@
+
 export type Lang = "en" | "it";
 
 export type NestedStrings = {
@@ -24,8 +25,10 @@ export const translations: Record<Lang, NestedStrings> = {
     },
     pages: {
       home: {
-        title: "Welcome",
-        intro: "Hi — I'm a developer building small, clean apps.",
+        hero : {
+          title : "Hi, i am ",
+          description : "Frontend developer"
+        }
       },
       resume: {
         title: "Resume",
@@ -56,6 +59,10 @@ export const translations: Record<Lang, NestedStrings> = {
       home: {
         title: "Benvenuto",
         intro: "Ciao — sono uno sviluppatore che crea piccole app pulite.",
+        hero: {
+          title: "Ciao, sono ",
+          description : "Frontend developer"
+        }
       },
       resume: {
         title: "Curriculum",
@@ -66,70 +73,3 @@ export const translations: Record<Lang, NestedStrings> = {
     },
   },
 };
-
-/*
-export type Lang = "en" | "it";
-
-export const translations: Record<Lang, Record<string, any>> = {
-  en: {
-    nav: {
-      home: "Home",
-      resume: "Resume",
-      projects: "Projects",
-    },
-    theme: {
-      switchToLight: "Switch to light mode",
-      switchToDark: "Switch to dark mode",
-      lightMode: "Light mode",
-      darkMode: "Dark mode",
-    },
-    lang: {
-      en: "English",
-      it: "Italiano",
-      ariaToggle: "Toggle language",
-    },
-    pages: {
-      home: {
-        title: "Welcome",
-        intro: "Hi — I'm a developer building small, clean apps.",
-      },
-      resume: {
-        title: "Resume",
-      },
-      projects: {
-        title: "Projects",
-      },
-    },
-  },
-  it: {
-    nav: {
-      home: "Home",
-      resume: "Curriculum",
-      projects: "Progetti",
-    },
-    theme: {
-      switchToLight: "Passa alla modalità chiara",
-      switchToDark: "Passa alla modalità scura",
-      lightMode: "Modalità chiara",
-      darkMode: "Modalità scura",
-    },
-    lang: {
-      en: "English",
-      it: "Italiano",
-      ariaToggle: "Cambia lingua",
-    },
-    pages: {
-      home: {
-        title: "Benvenuto",
-        intro: "Ciao — sono uno sviluppatore che crea piccole app pulite.",
-      },
-      resume: {
-        title: "Curriculum",
-      },
-      projects: {
-        title: "Progetti",
-      },
-    },
-  },
-};
-*/
