@@ -1,11 +1,11 @@
-import { useLanguage } from "../i18n/useLanguage";
 import Hero from "../components/Hero";
+import ProjectsSection from "../components/ProjectsSection";
 
 export default function Home(){
-    const { t } = useLanguage();
     return(
         <section>
             <Hero />
+            <ProjectsSection />
         </section>
     )
 }
