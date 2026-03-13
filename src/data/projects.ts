@@ -22,23 +22,23 @@ export const projects: ProjectData[] = [
     repoUrl: "https://github.com/gyo82v/jade-lily"
   },
   {
-    id: "chef-mistral",
-    titleKey: "projects.chefMistral.title",
-    descKey: "projects.chefMistral.description",
-    techKeys: ["tech.react", "tech.firebase", "tech.tailwind"],
-    image: "/images/projects/chef-mistral.png",
-    imageAltKey: "projects.chefMistral.imageAlt",
-    liveUrl: "https://chef-mistral.vercel.app",
+    id: "NexTill",
+    titleKey: "pages.home.projects.nexTill.title",
+    descKey: "pages.home.projects.nexTill.description",
+    techKeys: ["React-vite", "Firebase", "Tailwind"],
+    image: "src/images/laptop.png",
+    imageAltKey: "pages.home.projects.chefMistral.imageAlt",
+    liveUrl: "https://friendly-moonbeam-f330df.netlify.app/",
     repoUrl: "https://github.com/yourusername/chef-mistral"
   },
   {
-    id: "battleship",
-    titleKey: "projects.battleship.title",
-    descKey: "projects.battleship.description",
-    techKeys: ["tech.react", "tech.vite", "tech.css"],
-    image: "/images/projects/battleship.png",
-    imageAltKey: "projects.battleship.imageAlt",
-    liveUrl: "https://your-username.github.io/battleship",
+    id: "Arcadium",
+    titleKey: "pages.home.projects.arcadium.title",
+    descKey: "pages.home.projects.arcadium.description",
+    techKeys: ["React-vite", "Tailwind", "Firebase"],
+    image: "src/images/arcadium.jpg",
+    imageAltKey: "pages.home.projects.arcadium.imageAlt",
+    liveUrl: "https://resonant-starship-25cd8f.netlify.app/",
     repoUrl: "https://github.com/yourusername/battleship"
   }
 ];

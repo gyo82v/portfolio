@@ -1,5 +1,5 @@
 export const focusEffects =
-  `focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-offset-2
+  `focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-offset-0
    focus-visible:ring-[var(--accent)]`;
 
 export const transitions =

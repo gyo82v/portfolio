@@ -10,10 +10,10 @@ export default function ProjectsSection() {
       <div className="max-w-6xl mx-auto px-6">
         <header className="mb-8 text-center md:text-left">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-slate-100">
-            {t("projects.sectionTitle")}
+            {t("pages.home.projects.sectionTitle")}
           </h2>
           <p className="mt-2 text-slate-600 dark:text-slate-300">
-            {t("projects.sectionSubtitle")}
+            {t("pages.home.projects.sectionSubtitle")}
           </p>
         </header>
 
