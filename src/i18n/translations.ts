@@ -42,6 +42,13 @@ export const translations: Record<Lang, NestedStrings> = {
               "My background is in teaching and marketing, and I have a bachelor's degree in English from King's College. I also have five adorable cats."
           },
         },
+        contact : {
+          title: "Get in touch",
+          description:
+          "Have a question, a project in mind, or just want to say hello? Feel free to reach out.",
+          emailCta: "Send me an email",
+          emailAria: "Send an email"
+        },
         projects : {
           sectionAria: "Projects section",
           sectionTitle: "Projects",
@@ -113,6 +120,13 @@ export const translations: Record<Lang, NestedStrings> = {
             paragraph2:
               "Il mio background è nell'insegnamento e nel marketing, e ho una laurea in inglese presso King's College. Ho anche cinque adorabili gatti."
           },
+        },
+        contact : {
+          title: "Contattami",
+          description:
+          "Hai una domanda, un progetto in mente o vuoi semplicemente salutarmi? Scrivimi pure.",
+          emailCta: "Mandami un’email",
+          emailAria: "Invia un’email"
         },
         projects : {
           sectionAria: "Sezione progetti",
