@@ -2,11 +2,7 @@ import { FiMail } from "react-icons/fi";
 import { useLanguage } from "../i18n/useLanguage";
 import { focusEffects, transitions } from "../styles/patterns";
 
-type Props = {
-  email?: string;
-};
-
-export default function Contact({ email = "gyo82v@gmail.com" }: Props) {
+export default function Contact({ email = "gyo82v@gmail.com" }: {email?: string}) {
   const { t } = useLanguage();
 
   return (
