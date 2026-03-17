@@ -1,6 +1,8 @@
 import { useLanguage } from "../i18n/useLanguage";
 import { focusEffects, transitions } from "../styles/patterns";
 import {Link} from "react-router"
+import CertificatesList from "../components/CertificatesList";
+import { certificates } from "../data/certificates";
 
 type Props = {
   resumeHref?: string;
@@ -38,6 +40,7 @@ export default function About({
             <div className="mt-4 prose prose-sm sm:prose base dark:prose-invert max-w-none">
               <p>{t("pages.home.about.description.paragraph2")}</p>
             </div>
+            <CertificatesList certificates={certificates} showCount={2} />
           </div>
 
           {/* Right: skills + resume */}
