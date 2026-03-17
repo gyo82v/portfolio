@@ -15,13 +15,13 @@ export default function ResumePage() {
         <header className="mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
           <div>
             <h1 className="text-3xl font-extrabold text-slate-900 dark:text-slate-100">
-              {t("resume.header.name")}
+              {t("pages.resume.header.name")}
             </h1>
             <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
-              {t("resume.header.profession")} • {t("resume.header.location")}
+              {t("pages.resume.header.profession")} • {t("resume.header.location")}
             </p>
             <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
-              {t("resume.header.contactEmail")}
+              {t("pages.resume.header.contactEmail")}
             </p>
           </div>
 
@@ -56,28 +56,28 @@ export default function ResumePage() {
             {/* Profile */}
             <div>
               <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
-                {t("resume.profileTitle")}
+                {t("pages.resume.profileTitle")}
               </h2>
               <p className="mt-2 text-slate-700 dark:text-slate-200">
-                {t("resume.profileText")}
+                {t("pages.resume.profileText")}
               </p>
             </div>
 
             {/* Experience (placeholder entries) */}
             <div>
               <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
-                {t("resume.experienceTitle")}
+                {t("pages.resume.experienceTitle")}
               </h2>
 
               <article className="mt-4">
                 <h3 className="font-semibold text-slate-900 dark:text-slate-100">
-                  {t("resume.sampleJob.title")}
+                  {t("pages.resume.sampleJob.title")}
                 </h3>
                 <div className="text-sm text-slate-600 dark:text-slate-300">
-                  <span>{t("resume.sampleJob.company")}</span> · <span>{t("resume.sampleJob.date")}</span>
+                  <span>{t("pages.resume.sampleJob.company")}</span> · <span>{t("resume.sampleJob.date")}</span>
                 </div>
                 <p className="mt-2 text-slate-700 dark:text-slate-200">
-                  {t("resume.sampleJob.description")}
+                  {t("pages.resume.sampleJob.description")}
                 </p>
               </article>
 
@@ -87,15 +87,15 @@ export default function ResumePage() {
             {/* Education */}
             <div>
               <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
-                {t("resume.educationTitle")}
+                {t("pages.resume.educationTitle")}
               </h2>
 
               <div className="mt-4">
                 <h3 className="font-semibold text-slate-900 dark:text-slate-100">
-                  {t("resume.sampleEdu.degree")}
+                  {t("pages.resume.sampleEdu.degree")}
                 </h3>
                 <div className="text-sm text-slate-600 dark:text-slate-300">
-                  <span>{t("resume.sampleEdu.institution")}</span> · <span>{t("resume.sampleEdu.date")}</span>
+                  <span>{t("pages.resume.sampleEdu.institution")}</span> · <span>{t("resume.sampleEdu.date")}</span>
                 </div>
               </div>
             </div>
@@ -105,7 +105,7 @@ export default function ResumePage() {
           <aside className="space-y-6">
             {/* Skills */}
             <div className="bg-white dark:bg-slate-700 rounded-2xl p-4 ring-1 ring-slate-200 dark:ring-slate-700">
-              <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">{t("resume.skillsTitle")}</h3>
+              <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">{t("pages.resume.skillsTitle")}</h3>
               <ul className="mt-3 flex flex-wrap gap-2">
                 {["TypeScript", "React", "Tailwind CSS", "Node.js", "Firebase"].map((s) => (
                   <li key={s}>
@@ -119,7 +119,7 @@ export default function ResumePage() {
 
             {/* Languages */}
             <div className="bg-white dark:bg-slate-700 rounded-2xl p-4 ring-1 ring-slate-200 dark:ring-slate-700">
-              <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">{t("resume.languagesTitle")}</h3>
+              <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">{t("pages.resume.languagesTitle")}</h3>
               <ul className="mt-3 text-sm text-slate-700 dark:text-slate-200">
                 <li>English — C2</li>
                 <li>Italiano — C1</li>
@@ -128,7 +128,7 @@ export default function ResumePage() {
 
             {/* Certificates */}
             <div className="bg-white dark:bg-slate-700 rounded-2xl p-4 ring-1 ring-slate-200 dark:ring-slate-700">
-              <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">{t("resume.certificatesTitle")}</h3>
+              <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">{t("pages.resume.certificatesTitle")}</h3>
 
               <ul className="mt-3 space-y-3">
                 {certificates.map((c) => (

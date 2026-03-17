@@ -23,6 +23,14 @@ export const translations: Record<Lang, NestedStrings> = {
       it: "Italiano",
       ariaToggle: "Toggle language",
     },
+    resume : {
+      view: "View",
+      download: "Download",
+      viewCertificate: "View certificate: {{title}}",
+      downloadCertificateA11y: "Download certificate: {{title}}",
+      close: "Close",
+      certificateViewerAria: "Certificate viewer: {{title}}"
+    },
     pages: {
       home: {
         hero : {
@@ -34,6 +42,8 @@ export const translations: Record<Lang, NestedStrings> = {
           subtitle: "Front-End Developer and travel lover from London",
           skillsTitle: "Skills",
           resume: "Download CV",
+          certsTitle: "Selected certificates",
+          viewAllCertificates: "View all certificates on my CV",
           resumeHint: "Opens in a new tab (PDF)",
           description: {
             paragraph1:
@@ -76,7 +86,37 @@ export const translations: Record<Lang, NestedStrings> = {
         }
       },
       resume: {
-        title: "Resume",
+        title: "Curriculum",
+        header: {
+          name: "Jane Smith",
+          profession: "Front-End Developer",
+          location: "London, UK", // you mentioned :contentReference[oaicite:3]{index=3}
+          contactEmail: "jane@domain.com"
+        },
+        download: "Download CV",
+        open: "Open in new tab",
+        openInNewTab: "Open CV in a new tab",
+        profileTitle: "Profile",
+        profileText:
+          "I am a front-end developer with experience building performant and accessible web applications. I focus on JavaScript, React and modern CSS workflows. I enjoy turning complex problems into simple, beautiful UI.",
+        experienceTitle: "Experience",
+        sampleJob: {
+          title: "Frontend Developer",
+          company: "Acme Web",
+          date: "2023 — Present",
+          description: "Building web apps with React, TypeScript and Tailwind CSS."
+        },
+        educationTitle: "Education",
+        sampleEdu: {
+          degree: "BA English",
+          institution: "King's College London",
+          date: "2018"
+        },
+        skillsTitle: "Skills",
+        languagesTitle: "Languages",
+        certificatesTitle: "Certificates",
+        downloadCertificate: "Download certificate",
+        note: "If you’d like a longer CV or references, please contact me."
       },
       projects: {
         title: "Projects",
@@ -100,6 +140,14 @@ export const translations: Record<Lang, NestedStrings> = {
       it: "Italiano",
       ariaToggle: "Cambia lingua",
     },
+    resume : {
+      view: "Visualizza",
+      download: "Scarica",
+      viewCertificate: "Visualizza certificato: {{title}}",
+      downloadCertificateA11y: "Scarica certificato: {{title}}",
+      close: "Chiudi",
+      certificateViewerAria: "Visualizzatore certificato: {{title}}"
+    },
     pages: {
       home: {
         title: "Benvenuto",
@@ -113,6 +161,8 @@ export const translations: Record<Lang, NestedStrings> = {
           subtitle: "Sviluppatore Front-End e amante dei viaggi da Londra",
           skillsTitle: "Competenze",
           resume: "Scarica il CV",
+          certsTitle: "Certificati selezionati",
+          viewAllCertificates: "Vedi tutti i certificati sul mio CV",
           resumeHint: "Si apre in una nuova scheda (PDF)",
           description: {
             paragraph1:
@@ -155,11 +205,40 @@ export const translations: Record<Lang, NestedStrings> = {
         }
       },
       resume: {
-        title: "Curriculum",
-      },
+    header: {
+      name: "Jane Smith",
+      profession: "Sviluppatore Front-End",
+      location: "Londra, Regno Unito",
+      contactEmail: "jane@domain.com"
+    },
+    download: "Scarica CV",
+    open: "Apri in una nuova scheda",
+    openInNewTab: "Apri il CV in una nuova scheda",
+    profileTitle: "Profilo",
+    profileText:
+      "Sono uno sviluppatore front-end con esperienza nella costruzione di applicazioni web performanti e accessibili. Mi focalizzo su JavaScript, React e moderne pratiche CSS. Mi piace trasformare problemi complessi in interfacce semplici e curate.",
+    experienceTitle: "Esperienza",
+    sampleJob: {
+      title: "Sviluppatore Frontend",
+      company: "Acme Web",
+      date: "2023 — Presente",
+      description: "Sviluppo applicazioni web con React, TypeScript e Tailwind CSS."
+    },
+    educationTitle: "Istruzione",
+    sampleEdu: {
+      degree: "Laurea in Inglese",
+      institution: "King's College London",
+      date: "2018"
+    },
+    skillsTitle: "Competenze",
+    languagesTitle: "Lingue",
+    certificatesTitle: "Certificati",
+    downloadCertificate: "Scarica certificato",
+    note: "Se desideri un CV più dettagliato o referenze, contattami."
+  },
       projects: {
         title: "Progetti",
       },
     },
   },
-};
+}
