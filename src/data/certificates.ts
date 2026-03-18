@@ -1,4 +1,3 @@
-// src/data/certificates.ts
 export type Certificate = {
   id: string;
   title: string;
