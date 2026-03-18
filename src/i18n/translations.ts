@@ -26,10 +26,10 @@ export const translations: Record<Lang, NestedStrings> = {
     resume : {
       view: "View",
       download: "Download",
-      viewCertificate: "View certificate: {{title}}",
-      downloadCertificateA11y: "Download certificate: {{title}}",
+      viewCertificate: "View certificate",
+      downloadCertificateA11y: "Download certificate",
       close: "Close",
-      certificateViewerAria: "Certificate viewer: {{title}}"
+      certificateViewerAria: "Certificate viewer"
     },
     pages: {
       home: {
@@ -45,12 +45,7 @@ export const translations: Record<Lang, NestedStrings> = {
           certsTitle: "Selected certificates",
           viewAllCertificates: "View all certificates on my CV",
           resumeHint: "Opens in a new tab (PDF)",
-          description: {
-            paragraph1:
-              "I'm a web developer and designer based out of London, UK. I love building apps that solve real-world problems and are delightful to use. My specialities include TypeScript, React JS, Tailwind CSS and Styled Components.",
-            paragraph2:
-              "My background is in teaching and marketing, and I have a bachelor's degree in English from King's College. I also have five adorable cats."
-          },
+          description: "I’m a web developer and designer based between London and Bergamo, Italy. I focus on building reliable, user-friendly web applications using Next.js, TypeScript, React, Tailwind CSS, and Firebase. I’m Italian and have lived in London for over 10 years. My background includes IT support and restaurant management, and I’ve spent a year working in Australia. I enjoy working in international environments, travelling, and I’m currently aiming to expand my skills with React Native.",
         },
         contact : {
           title: "Get in touch",
@@ -90,7 +85,7 @@ export const translations: Record<Lang, NestedStrings> = {
         header: {
           name: "Jane Smith",
           profession: "Front-End Developer",
-          location: "London, UK", // you mentioned :contentReference[oaicite:3]{index=3}
+          location: "London, UK", 
           contactEmail: "jane@domain.com"
         },
         download: "Download CV",
@@ -143,10 +138,10 @@ export const translations: Record<Lang, NestedStrings> = {
     resume : {
       view: "Visualizza",
       download: "Scarica",
-      viewCertificate: "Visualizza certificato: {{title}}",
-      downloadCertificateA11y: "Scarica certificato: {{title}}",
+      viewCertificate: "Visualizza certificato",
+      downloadCertificateA11y: "Scarica certificato",
       close: "Chiudi",
-      certificateViewerAria: "Visualizzatore certificato: {{title}}"
+      certificateViewerAria: "Visualizzatore certificato"
     },
     pages: {
       home: {
@@ -164,12 +159,7 @@ export const translations: Record<Lang, NestedStrings> = {
           certsTitle: "Certificati selezionati",
           viewAllCertificates: "Vedi tutti i certificati sul mio CV",
           resumeHint: "Si apre in una nuova scheda (PDF)",
-          description: {
-            paragraph1:
-              "Sono uno sviluppatore web e designer basato a Londra, Regno Unito. Amo costruire applicazioni che risolvono problemi reali e che siano piacevoli da usare. Le mie specialità includono TypeScript, React JS, Tailwind CSS e Styled Components.",
-            paragraph2:
-              "Il mio background è nell'insegnamento e nel marketing, e ho una laurea in inglese presso King's College. Ho anche cinque adorabili gatti."
-          },
+          description: "Sono uno sviluppatore web e designer con base tra Londra e Bergamo. Mi occupo di creare applicazioni web affidabili e facili da usare utilizzando Next.js, TypeScript, React-vite, Tailwind CSS e Firebase. Sono italiano ho vissuto a Londra da oltre 10 anni. Il mio background include IT support e gestione di ristoranti, e ho lavorato per un anno in Australia. Mi piace lavorare in contesti internazionali, viaggiare e il mio obiettivo attuale è approfondire React Native.",
         },
         contact : {
           title: "Contattami",
