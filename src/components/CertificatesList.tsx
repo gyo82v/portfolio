@@ -38,7 +38,7 @@ export default function CertificatesList({ certificates, showCount = null }: Pro
   const list = showCount && showCount > 0 ? certificates.slice(0, showCount) : certificates;
 
   return (
-    <div>
+    <div className="border-2 border-orange-600">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {list.map((c) => (
           <CertificateCard key={c.id} certificate={c} onView={(cert) => setActive(cert)} />
@@ -50,7 +50,7 @@ export default function CertificatesList({ certificates, showCount = null }: Pro
         <div
           role="dialog"
           aria-modal="true"
-          aria-label={t("resume.certificateViewerAria", { title: active.title })}
+          aria-label={t("resume.certificateViewerAria")}
           className="fixed inset-0 z-50 flex items-center justify-center p-4"
         >
           {/* backdrop */}
