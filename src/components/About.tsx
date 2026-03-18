@@ -4,25 +4,20 @@ import {Link} from "react-router"
 import CertificatesList from "../components/CertificatesList";
 import { certificates } from "../data/certificates";
 
-type Props = {
-  resumeHref?: string;
-  skills?: string[];
-};
-
 export default function About({
   skills = ["TypeScript", "React-vite", "Tailwind CSS", "Next.js", "Firebase", "CSS"]
-}: Props) {
+}: {skills? : string[]}) {
   const { t } = useLanguage();
 
   return (
     <section
       id="about"
       aria-labelledby="about-title"
-      className="py-20 bg-slate-50 dark:bg-slate-800 transition-colors duration-200"
+      className="py-20 bg-slate-50 dark:bg-slate-800 transition-colors duration-200 border-2 border-pink-500"
     >
-      <div className="max-w-5xl mx-auto px-6">
-        <header className="mb-8 text-center md:text-left">
-          <h2 id="about-title" className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-slate-100">
+      <div className="max-w-5xl mx-auto px-6 border-2 border-green-500">
+        <header className="mb-8 text-center  border-2 border-sky-500">
+          <h2 id="about-title" className="text-2xl sm:text-3xl font-extrabold">
             {t("pages.home.about.title")}
           </h2>
           <p className="mt-2 text-slate-600 dark:text-slate-300">
@@ -30,23 +25,17 @@ export default function About({
           </p>
         </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-          {/* Left: description (takes 2 cols on md+) */}
-          <div className="md:col-span-2 text-slate-700 dark:text-slate-200">
-            <p className="prose prose-sm sm:prose base dark:prose-invert max-w-none">
-              {t("pages.home.about.description.paragraph1")}
+        <div className="flex flex-col gap-8  border-2 border-yellow-500">
+          <div className=" text-slate-700 dark:text-slate-200 border-2 border-red-500">
+            <p className="prose prose-sm sm:prose base dark:prose-invert max-w-none text-center">
+              {t("pages.home.about.description")}
             </p>
-
-            <div className="mt-4 prose prose-sm sm:prose base dark:prose-invert max-w-none">
-              <p>{t("pages.home.about.description.paragraph2")}</p>
-            </div>
-            <CertificatesList certificates={certificates} showCount={2} />
           </div>
 
-          {/* Right: skills + resume */}
-          <aside className="md:col-span-1">
+          <div className="flex flex-col gap-4 md:flex-row border-2 border-fuchsia-800">
+             <CertificatesList certificates={certificates} showCount={3} />
             <div className="bg-white dark:bg-slate-700 rounded-2xl p-5 shadow-sm ring-1 ring-slate-200 dark:ring-slate-700">
-              <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">
+              <h3 className="text-sm font-semibold ">
                 {t("pages.home.about.skillsTitle")}
               </h3>
 
@@ -81,7 +70,7 @@ export default function About({
                 </p>
               </div>
             </div>
-          </aside>
+          </div>
         </div>
       </div>
     </section>
