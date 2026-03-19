@@ -1,5 +1,5 @@
 // src/components/CertificatesList.tsx
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import type { Certificate } from "../data/certificates";
 import CertificateCard from "./CertificateCard";
 import { useLanguage } from "../i18n/useLanguage";
@@ -38,8 +38,8 @@ export default function CertificatesList({ certificates, showCount = null }: Pro
   const list = showCount && showCount > 0 ? certificates.slice(0, showCount) : certificates;
 
   return (
-    <div className="border-2 border-orange-600">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div >
+      <div className="flex flex-col gap-4">
         {list.map((c) => (
           <CertificateCard key={c.id} certificate={c} onView={(cert) => setActive(cert)} />
         ))}

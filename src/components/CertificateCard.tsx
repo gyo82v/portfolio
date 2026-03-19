@@ -1,4 +1,4 @@
-import { FiDownload, FiEye } from "react-icons/fi";
+import { FiEye } from "react-icons/fi";
 import type { Certificate } from "../data/certificates";
 import { focusEffects, transitions } from "../styles/patterns";
 import { useLanguage } from "../i18n/useLanguage";
@@ -14,8 +14,9 @@ export default function CertificateCard({ certificate, onView }: Props) {
   return (
     <article
       className={`
-        flex flex-col bg-white dark:bg-slate-700 rounded-2xl overflow-hidden ring-1 ring-slate-200 dark:ring-slate-700
-        p-3
+        flex items-center gap-2 p-3 rounded-2xl
+        bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200
+        overflow-hidden ring-1 ring-slate-200 dark:ring-slate-700
       `}
       aria-labelledby={`cert-${certificate.id}-title`}
     >
@@ -23,12 +24,10 @@ export default function CertificateCard({ certificate, onView }: Props) {
         <h3 id={`cert-${certificate.id}-title`} className="text-sm font-semibold text-slate-900 dark:text-slate-100">
           {certificate.title}
         </h3>
-
-        <div className="text-xs text-slate-600 dark:text-slate-300 mt-1">
-          <span>{certificate.issuer}</span> · <span>{certificate.date}</span>
-        </div>
       </div>
-
+      <div className="text-xs text-slate-600 dark:text-slate-300 mt-1">
+        <p>{certificate.issuer}<span> · </span>{certificate.date}</p>
+      </div>
       <div className="mt-4 flex gap-2">
         <button
           type="button"
@@ -40,7 +39,7 @@ export default function CertificateCard({ certificate, onView }: Props) {
           aria-label={t("resume.viewCertificate")}
         >
           <FiEye className="w-4 h-4" aria-hidden="true" />
-          <span>{t("resume.view")}</span>
+          <span className="hidden md:block">{t("resume.view")}</span>
         </button>
       </div>
     </article>

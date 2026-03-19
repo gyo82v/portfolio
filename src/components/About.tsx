@@ -3,9 +3,12 @@ import { focusEffects, transitions } from "../styles/patterns";
 import {Link} from "react-router"
 import CertificatesList from "../components/CertificatesList";
 import { certificates } from "../data/certificates";
+import AboutSection from "./AboutSection";
+import { HiOutlineDocumentText } from "react-icons/hi";
+import Pill from "./elements/Pill";
 
 export default function About({
-  skills = ["TypeScript", "React-vite", "Tailwind CSS", "Next.js", "Firebase", "CSS"]
+  skills = ["Next.js","React-vite","TypeScript","Git", "Tailwind CSS", "Firebase", "Javascript","HTML", "CSS"]
 }: {skills? : string[]}) {
   const { t } = useLanguage();
 
@@ -13,10 +16,10 @@ export default function About({
     <section
       id="about"
       aria-labelledby="about-title"
-      className="py-20 bg-slate-50 dark:bg-slate-800 transition-colors duration-200 border-2 border-pink-500"
+      className="py-20 bg-slate-50 dark:bg-slate-800 transition-colors duration-200 "
     >
-      <div className="max-w-5xl mx-auto px-6 border-2 border-green-500">
-        <header className="mb-8 text-center  border-2 border-sky-500">
+      <div className="max-w-5xl mx-auto px-6 ">
+        <header className="mb-8 text-center  ">
           <h2 id="about-title" className="text-2xl sm:text-3xl font-extrabold">
             {t("pages.home.about.title")}
           </h2>
@@ -25,34 +28,30 @@ export default function About({
           </p>
         </header>
 
-        <div className="flex flex-col gap-8  border-2 border-yellow-500">
-          <div className=" text-slate-700 dark:text-slate-200 border-2 border-red-500">
+        <div className="flex flex-col gap-8 ">
+          <div className=" text-slate-700 dark:text-slate-200 ">
             <p className="prose prose-sm sm:prose base dark:prose-invert max-w-none text-center">
               {t("pages.home.about.description")}
             </p>
           </div>
 
-          <div className="flex flex-col gap-4 md:flex-row border-2 border-fuchsia-800">
-             <CertificatesList certificates={certificates} showCount={3} />
-            <div className="bg-white dark:bg-slate-700 rounded-2xl p-5 shadow-sm ring-1 ring-slate-200 dark:ring-slate-700">
-              <h3 className="text-sm font-semibold ">
-                {t("pages.home.about.skillsTitle")}
-              </h3>
-
-              <ul className="mt-3 flex flex-wrap gap-2" aria-label={t("pages.home.about.skillsTitle")}>
+          <div className="flex flex-col gap-4 md:flex-row">
+            <AboutSection title="pages.home.about.certsTitle">
+              <CertificatesList certificates={certificates} showCount={3} />
+            </AboutSection>
+            <AboutSection title="pages.home.about.skillsTitle">
+              <div className="flex flex-col gap-6 justify-between h-full">
+              <ul className="flex flex-wrap gap-2 md:gap-3 md:mt-8" aria-label={t("pages.home.about.skillsTitle")}>
                 {skills.map((skill) => (
                   <li key={skill}>
-                    <span
-                      className="inline-block text-xs font-medium px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200"
-                      aria-hidden="true"
-                    >
+                    <Pill className={`md:text-sm md:px-6 md:py-3 `}>
                       {skill}
-                    </span>
+                    </Pill>
                   </li>
                 ))}
               </ul>
 
-              <div className="mt-5">
+              <div>
                 <Link
                   to="resume"
                   className={`
@@ -62,14 +61,12 @@ export default function About({
                     hover:bg-opacity-90
                   `}
                 >
-                  {t("pages.home.about.resume")}
+                  <HiOutlineDocumentText className="h-5 w-5 mr-1" />
+                  <span> {t("pages.home.about.resume")}</span>
                 </Link>
-
-                <p className="mt-3 text-xs text-slate-500 dark:text-slate-300">
-                  {t("pages.home.about.resumeHint")}
-                </p>
               </div>
-            </div>
+              </div>
+            </AboutSection>
           </div>
         </div>
       </div>
