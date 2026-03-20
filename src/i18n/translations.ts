@@ -44,6 +44,9 @@ export const translations: Record<Lang, NestedStrings> = {
           resume: "View Resume",
           certsTitle: "Professional Certificates",
           description: "I’m a web developer and designer based between London and Bergamo, Italy. I focus on building reliable, user-friendly web applications using Next.js, TypeScript, React, Tailwind CSS, and Firebase. I’m Italian and have lived in London for over 10 years. My background includes IT support and restaurant management, and I’ve spent a year working in Australia. I enjoy working in international environments, travelling, and I’m currently aiming to expand my skills with React Native.",
+          description1: "I’m a web developer and designer based between London and Bergamo, Italy. I focus on building reliable, user-friendly web applications using ",
+          description2: " and ",
+          description3: ". I’m Italian and have lived in London for over 10 years. My background includes IT support and restaurant management, and I’ve spent a year working in Australia. I enjoy working in international environments, travelling, and I’m currently aiming to expand my skills with React Native."
         },
         contact : {
           title: "Get in touch",
@@ -156,6 +159,9 @@ export const translations: Record<Lang, NestedStrings> = {
           resume: "Visualizza CV",
           certsTitle: "Certificati Professionali",
           description: "Sono uno sviluppatore web e designer con base tra Londra e Bergamo. Mi occupo di creare applicazioni web affidabili e facili da usare utilizzando Next.js, TypeScript, React-vite, Tailwind CSS e Firebase. Sono italiano ho vissuto a Londra da oltre 10 anni. Il mio background include IT support e gestione di ristoranti, e ho lavorato per un anno in Australia. Mi piace lavorare in contesti internazionali, viaggiare e il mio obiettivo attuale è approfondire React Native.",
+          description1: "Sono uno sviluppatore web e designer con base tra Londra e Bergamo. Mi occupo di creare applicazioni web affidabili e facili da usare utilizzando ",
+          description2: " e ",
+          description3: ". Sono italiano ho vissuto a Londra da oltre 10 anni. Il mio background include IT support e gestione di ristoranti, e ho lavorato per un anno in Australia. Mi piace lavorare in contesti internazionali, viaggiare e il mio obiettivo attuale è approfondire React Native."
         },
         contact : {
           title: "Contattami",
