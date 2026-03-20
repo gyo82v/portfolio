@@ -29,19 +29,26 @@ export default function About({
         </header>
 
         <div className="flex flex-col gap-8 ">
-          <div className=" text-slate-700 dark:text-slate-200 ">
-            <p className="prose prose-sm sm:prose base dark:prose-invert max-w-none text-center">
-              {t("pages.home.about.description")}
+          <div className=" text-slate-700 dark:text-slate-200 my-2 md:my-4 ">
+            <p className="prose prose-sm sm:prose-base dark:prose-invert max-w-none text-center">
+              {t("pages.home.about.description1")}
+              <span className="text-teal-500 font-semibold">Next.js</span>,{" "}
+              <span className="text-teal-500 font-semibold">TypeScript</span>,{" "}
+              <span className="text-teal-500 font-semibold">React-vite</span>,{" "}
+              <span className="text-teal-500 font-semibold">Tailwind CSS</span>
+              {t("pages.home.about.description2")}
+              <span className="text-teal-500 font-semibold">Firebase</span>
+              {t("pages.home.about.description3")}
             </p>
           </div>
 
-          <div className="flex flex-col gap-4 md:flex-row">
+          <div className="flex flex-col gap-10 md:flex-row">
             <AboutSection title="pages.home.about.certsTitle">
               <CertificatesList certificates={certificates} showCount={3} />
             </AboutSection>
             <AboutSection title="pages.home.about.skillsTitle">
               <div className="flex flex-col gap-6 justify-between h-full">
-              <ul className="flex flex-wrap gap-2 md:gap-3 md:mt-8" aria-label={t("pages.home.about.skillsTitle")}>
+              <ul className="flex flex-wrap gap-2 md:gap-3 md:mt-5" aria-label={t("pages.home.about.skillsTitle")}>
                 {skills.map((skill) => (
                   <li key={skill}>
                     <Pill className={`md:text-sm md:px-6 md:py-3 `}>
@@ -58,7 +65,7 @@ export default function About({
                     inline-flex items-center justify-center w-full px-4 py-2 rounded-lg
                     bg-[var(--accent)] text-white font-medium
                     ${transitions} ${focusEffects}
-                    hover:bg-opacity-90
+                    hover:scale-102 active:scale-95 
                   `}
                 >
                   <HiOutlineDocumentText className="h-5 w-5 mr-1" />
@@ -73,3 +80,15 @@ export default function About({
     </section>
   );
 }
+
+
+
+/*
+ <div className=" text-slate-700 dark:text-slate-200 my-2 md:my-4 ">
+            <p className="prose prose-sm sm:prose base dark:prose-invert max-w-none text-center">
+              {t("pages.home.about.description")}
+            </p>
+          </div>
+
+
+*/
