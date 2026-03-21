@@ -80,15 +80,3 @@ export default function About({
     </section>
   );
 }
-
-
-
-/*
- <div className=" text-slate-700 dark:text-slate-200 my-2 md:my-4 ">
-            <p className="prose prose-sm sm:prose base dark:prose-invert max-w-none text-center">
-              {t("pages.home.about.description")}
-            </p>
-          </div>
-
-
-*/
