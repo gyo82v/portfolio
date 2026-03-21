@@ -2,6 +2,7 @@ import { FiDownload, FiExternalLink } from "react-icons/fi";
 import { useLanguage } from "../i18n/useLanguage";
 import { certificates } from "../data/certificates.ts";
 import { focusEffects, transitions } from "../styles/patterns";
+import CertificatesList from "../components/CertificatesList";
 
 export default function ResumePage() {
   const { t } = useLanguage();
@@ -9,19 +10,19 @@ export default function ResumePage() {
   const resumePdf = "/assets/resume.pdf"; // replace with your PDF path
 
   return (
-    <main className="py-16 bg-slate-50 dark:bg-slate-800 min-h-screen transition-colors duration-200">
+    <div className="py-16 bg-slate-50 dark:bg-slate-800 min-h-screen transition-colors duration-200">
       <div className="max-w-4xl mx-auto px-6">
         {/* Header */}
-        <header className="mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+        <header className="mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 border-2 border-orange-500">
           <div>
             <h1 className="text-3xl font-extrabold text-slate-900 dark:text-slate-100">
-              {t("pages.resume.header.name")}
+              Giorgio Valle
             </h1>
             <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
-              {t("pages.resume.header.profession")} • {t("resume.header.location")}
+              {t("pages.resume.header.profession")} • {t("pages.resume.header.location")}
             </p>
             <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
-              {t("pages.resume.header.contactEmail")}
+              gyo82v@gmail.com
             </p>
           </div>
 
@@ -50,9 +51,9 @@ export default function ResumePage() {
         </header>
 
         {/* Two-column content: left main, right sidebar */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 border-2 border-green-500">
           {/* LEFT: main (experience, education) */}
-          <section className="lg:col-span-2 space-y-8">
+          <section className="lg:col-span-2 space-y-8 border-2 border-purple-500">
             {/* Profile */}
             <div>
               <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
@@ -71,13 +72,16 @@ export default function ResumePage() {
 
               <article className="mt-4">
                 <h3 className="font-semibold text-slate-900 dark:text-slate-100">
-                  {t("pages.resume.sampleJob.title")}
+                  {t("pages.resume.maestriPasta.title")}
                 </h3>
                 <div className="text-sm text-slate-600 dark:text-slate-300">
-                  <span>{t("pages.resume.sampleJob.company")}</span> · <span>{t("resume.sampleJob.date")}</span>
+                  <span>{t("pages.resume.maestriPasta.company")}</span> · <span>{t("pages.resume.maestriPasta.date")}</span>
+                </div>
+                <div className="text-sm text-slate-600 dark:text-slate-300">
+                  {t("pages.resume.maestriPasta.location")}
                 </div>
                 <p className="mt-2 text-slate-700 dark:text-slate-200">
-                  {t("pages.resume.sampleJob.description")}
+                  {t("pages.resume.maestriPasta.description")}
                 </p>
               </article>
 
@@ -87,22 +91,25 @@ export default function ResumePage() {
             {/* Education */}
             <div>
               <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
+                {t("pages.resume.certificatesMainTitle")}
+              </h2>
+              <CertificatesList certificates={certificates} showCount={3} />
+              <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
                 {t("pages.resume.educationTitle")}
               </h2>
-
               <div className="mt-4">
                 <h3 className="font-semibold text-slate-900 dark:text-slate-100">
-                  {t("pages.resume.sampleEdu.degree")}
+                  {t("pages.resume.school.degree")}
                 </h3>
                 <div className="text-sm text-slate-600 dark:text-slate-300">
-                  <span>{t("pages.resume.sampleEdu.institution")}</span> · <span>{t("resume.sampleEdu.date")}</span>
+                  <span>{t("pages.resume.school.institution")}</span> · <span>{t("pages.resume.school.date")}</span>
                 </div>
               </div>
             </div>
           </section>
 
           {/* RIGHT: sidebar (skills, languages, certificates) */}
-          <aside className="space-y-6">
+          <aside className="space-y-6 border-2 border-sky-500">
             {/* Skills */}
             <div className="bg-white dark:bg-slate-700 rounded-2xl p-4 ring-1 ring-slate-200 dark:ring-slate-700">
               <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">{t("pages.resume.skillsTitle")}</h3>
@@ -121,8 +128,8 @@ export default function ResumePage() {
             <div className="bg-white dark:bg-slate-700 rounded-2xl p-4 ring-1 ring-slate-200 dark:ring-slate-700">
               <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">{t("pages.resume.languagesTitle")}</h3>
               <ul className="mt-3 text-sm text-slate-700 dark:text-slate-200">
-                <li>English — C2</li>
-                <li>Italiano — C1</li>
+                <li>{t("pages.resume.languageEnglish")}</li>
+                <li>{t("pages.resume.languageItalian")}</li>
               </ul>
             </div>
 
@@ -161,6 +168,6 @@ export default function ResumePage() {
           {t("resume.note")}
         </p>
       </div>
-    </main>
+    </div>
   );
 }

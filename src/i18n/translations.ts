@@ -91,10 +91,8 @@ export const translations: Record<Lang, NestedStrings> = {
       resume: {
         title: "Curriculum",
         header: {
-          name: "Jane Smith",
           profession: "Front-End Developer",
-          location: "London, UK", 
-          contactEmail: "jane@domain.com"
+          location: "London, UK/ Bergamo, Italy", 
         },
         download: "Download CV",
         open: "Open in new tab",
@@ -103,21 +101,53 @@ export const translations: Record<Lang, NestedStrings> = {
         profileText:
           "I am a front-end developer with experience building performant and accessible web applications. I focus on JavaScript, React and modern CSS workflows. I enjoy turning complex problems into simple, beautiful UI.",
         experienceTitle: "Experience",
-        sampleJob: {
-          title: "Frontend Developer",
-          company: "Acme Web",
-          date: "2023 — Present",
-          description: "Building web apps with React, TypeScript and Tailwind CSS."
+        maestriPasta: {
+          title: "Assistant Manager",
+          location: "London",
+          company: "Maestri della Pasta",
+          date: "2019 — 2022",
+          description: "Managed kitchen operations, stock control, and daily workflow to ensure smooth service. Supervised food preparation, including fresh pasta production, and supported the team in maintaining high standards of quality, organization, and efficiency."
+        },
+        deckchairs: {
+          title: "Attendant",
+          company: "Royal Parks, deckchairs",
+          date: "2014-2018",
+          location: "Londra",
+          description: ``
+        },
+        cdc: {
+          title: "Attendant",
+          company: "CDC Bergamo",
+          date: "2000-2002",
+          location: "Bergamo",
+          description: ``
+        },
+        farm: {
+          title: "Attendant",
+          company: "CDC Bergamo",
+          date: "2013-2014",
+          location: "Cairns Australia",
+          description: ``
+        },
+        hostel: {
+          title: "Attendant",
+          company: "CDC Bergamo",
+          date: "2002-2005",
+          location: "Los Angeles/San Diego",
+          description: ``
         },
         educationTitle: "Education",
-        sampleEdu: {
-          degree: "BA English",
-          institution: "King's College London",
-          date: "2018"
+        certificatesMainTitle : "Key Certifications",
+        school: {
+          degree: "Scientific High School (first two years)",
+          institution: "Fantoni Liceo Scientifico",
+          date: "1999"
         },
         skillsTitle: "Skills",
         languagesTitle: "Languages",
-        certificatesTitle: "Certificates",
+        languageEnglish : "English — C1 (Advanced)",
+        languageItalian: "Italian — Native",
+        certificatesTitle: "Additional Certifications",
         downloadCertificate: "Download certificate",
         note: "If you’d like a longer CV or references, please contact me."
       },
@@ -212,10 +242,8 @@ export const translations: Record<Lang, NestedStrings> = {
       },
       resume: {
     header: {
-      name: "Jane Smith",
       profession: "Sviluppatore Front-End",
-      location: "Londra, Regno Unito",
-      contactEmail: "jane@domain.com"
+      location: "Londra, UK/ Bergamo, It",
     },
     download: "Scarica CV",
     open: "Apri in una nuova scheda",
@@ -224,21 +252,53 @@ export const translations: Record<Lang, NestedStrings> = {
     profileText:
       "Sono uno sviluppatore front-end con esperienza nella costruzione di applicazioni web performanti e accessibili. Mi focalizzo su JavaScript, React e moderne pratiche CSS. Mi piace trasformare problemi complessi in interfacce semplici e curate.",
     experienceTitle: "Esperienza",
-    sampleJob: {
-      title: "Sviluppatore Frontend",
-      company: "Acme Web",
-      date: "2023 — Presente",
-      description: "Sviluppo applicazioni web con React, TypeScript e Tailwind CSS."
+    maestriPasta: {
+      title: "Assistant Manager",
+      company: "Maestri della Pasta",
+      date: "2019 — 2022",
+      location: "Londra",
+      description: "Ho gestito le operazioni della cucina, il controllo delle scorte e l’organizzazione del lavoro quotidiano, garantendo un servizio fluido ed efficiente. Mi occupavo anche della preparazione dei cibi, inclusa la produzione di pasta fresca, supportando il team nel mantenimento di elevati standard di qualità, ordine e produttività."
+    },
+    deckchairs: {
+      title: "Attendant",
+      company: "Royal Parks, deckchairs",
+      date: "2014-2018",
+      location: "Londra",
+      description: ``
+    },
+    cdc: {
+      title: "Attendant",
+      company: "CDC Bergamo",
+      date: "2000-2002",
+      location: "Bergamo",
+      description: ``
+    },
+    farm: {
+      title: "Attendant",
+      company: "CDC Bergamo",
+      date: "2013-2014",
+      location: "Cairns Australia",
+      description: ``
+    },
+    hostel: {
+      title: "Attendant",
+      company: "CDC Bergamo",
+      date: "2002-2005",
+      location: "Los Angeles/San Diego",
+      description: ``
     },
     educationTitle: "Istruzione",
-    sampleEdu: {
-      degree: "Laurea in Inglese",
-      institution: "King's College London",
-      date: "2018"
+    certificatesMainTitle : "Certificazioni Principali",
+    school: {
+      degree: "Biennio liceo scientifico",
+      institution: "Fantoni Liceo Scientifico",
+      date: "1999"
     },
     skillsTitle: "Competenze",
     languagesTitle: "Lingue",
-    certificatesTitle: "Certificati",
+    languageEnglish : "Inglese — C1 (Avanzato)",
+    languageItalian: "Italiano — Madrelingua",
+    certificatesTitle: "Certificazioni Aggiuntive",
     downloadCertificate: "Scarica certificato",
     note: "Se desideri un CV più dettagliato o referenze, contattami."
   },
