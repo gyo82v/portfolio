@@ -31,6 +31,13 @@ export const translations: Record<Lang, NestedStrings> = {
       close: "Close",
       certificateViewerAria: "Certificate viewer"
     },
+    footer : {
+      subtitle: "Available for freelance work and new opportunities",
+      emailAria: "Send me an email",
+      linkedinAria: "Visit my LinkedIn profile",
+      githubAria: "Visit my GitHub profile",
+      note: "Built with React, TypeScript, and Tailwind CSS"
+    },
     pages: {
       home: {
         hero : {
@@ -143,6 +150,13 @@ export const translations: Record<Lang, NestedStrings> = {
       downloadCertificateA11y: "Scarica certificato",
       close: "Chiudi",
       certificateViewerAria: "Visualizzatore certificato"
+    },
+    footer: {
+      subtitle: "Disponibile per collaborazioni freelance e nuove opportunità",
+      emailAria: "Inviami un'email",
+      linkedinAria: "Visita il mio profilo LinkedIn",
+      githubAria: "Visita il mio profilo GitHub",
+      note: "Realizzato con React, TypeScript e Tailwind CSS"
     },
     pages: {
       home: {
