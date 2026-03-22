@@ -1,6 +1,7 @@
 import { FiDownload, FiExternalLink } from "react-icons/fi";
 import { useLanguage } from "../i18n/useLanguage";
 import { certificates } from "../data/certificates.ts";
+import { additionalCertificates } from "../data/additionalCertificates.ts";
 import { focusEffects, transitions } from "../styles/patterns";
 import CertificatesList from "../components/CertificatesList";
 
@@ -85,6 +86,36 @@ export default function ResumePage() {
                 </p>
               </article>
 
+              <article className="mt-4">
+                <h3 className="font-semibold text-slate-900 dark:text-slate-100">
+                  {t("pages.resume.deckchairs.title")}
+                </h3>
+                <div className="text-sm text-slate-600 dark:text-slate-300">
+                  <span>{t("pages.resume.deckchairs.company")}</span> · <span>{t("pages.resume.deckchairs.date")}</span>
+                </div>
+                <div className="text-sm text-slate-600 dark:text-slate-300">
+                  {t("pages.resume.deckchairs.location")}
+                </div>
+                <p className="mt-2 text-slate-700 dark:text-slate-200">
+                  {t("pages.resume.deckchairs.description")}
+                </p>
+              </article>
+
+              <article className="mt-4">
+                <h3 className="font-semibold text-slate-900 dark:text-slate-100">
+                  {t("pages.resume.cdc.title")}
+                </h3>
+                <div className="text-sm text-slate-600 dark:text-slate-300">
+                  <span>{t("pages.resume.cdc.company")}</span> · <span>{t("pages.resume.cdc.date")}</span>
+                </div>
+                <div className="text-sm text-slate-600 dark:text-slate-300">
+                  {t("pages.resume.cdc.location")}
+                </div>
+                <p className="mt-2 text-slate-700 dark:text-slate-200">
+                  {t("pages.resume.cdc.description")}
+                </p>
+              </article>
+
               {/* Add more experience entries here as needed */}
             </div>
 
@@ -105,6 +136,41 @@ export default function ResumePage() {
                   <span>{t("pages.resume.school.institution")}</span> · <span>{t("pages.resume.school.date")}</span>
                 </div>
               </div>
+            </div>
+            <div>
+              <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
+                extra experience
+              </h2>
+
+               <article className="mt-4">
+                <h3 className="font-semibold text-slate-900 dark:text-slate-100">
+                  {t("pages.resume.farm.title")}
+                </h3>
+                <div className="text-sm text-slate-600 dark:text-slate-300">
+                  <span>{t("pages.resume.farm.company")}</span> · <span>{t("pages.resume.farm.date")}</span>
+                </div>
+                <div className="text-sm text-slate-600 dark:text-slate-300">
+                  {t("pages.resume.farm.location")}
+                </div>
+                <p className="mt-2 text-slate-700 dark:text-slate-200">
+                  {t("pages.resume.farm.description")}
+                </p>
+              </article>
+
+               <article className="mt-4">
+                <h3 className="font-semibold text-slate-900 dark:text-slate-100">
+                  {t("pages.resume.hostel.title")}
+                </h3>
+                <div className="text-sm text-slate-600 dark:text-slate-300">
+                  <span>{t("pages.resume.hostel.company")}</span> · <span>{t("pages.resume.hostel.date")}</span>
+                </div>
+                <div className="text-sm text-slate-600 dark:text-slate-300">
+                  {t("pages.resume.hostel.location")}
+                </div>
+                <p className="mt-2 text-slate-700 dark:text-slate-200">
+                  {t("pages.resume.hostel.description")}
+                </p>
+              </article>
             </div>
           </section>
 
@@ -138,7 +204,7 @@ export default function ResumePage() {
               <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">{t("pages.resume.certificatesTitle")}</h3>
 
               <ul className="mt-3 space-y-3">
-                {certificates.map((c) => (
+                {additionalCertificates.map((c) => (
                   <li key={c.id} className="flex items-start justify-between gap-3">
                     <div>
                       <div className="text-sm font-medium text-slate-900 dark:text-slate-100">{c.title}</div>
