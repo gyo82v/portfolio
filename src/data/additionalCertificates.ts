@@ -1,11 +1,4 @@
-export type Certificate = {
-  id: string;
-  title: string;
-  issuer: string;
-  date: string; // e.g. "2024-06"
-  file: string; // path to pdf, e.g. "/assets/certificates/frontend-dev.pdf"
-  previewImage?: string; // optional preview image path e.g. "/assets/certificates/frontend-dev.jpg"
-};
+import type { Certificate } from "../types/dataTypes";
 
 export const additionalCertificates: Certificate[] = [
     {
@@ -70,14 +63,6 @@ export const additionalCertificates: Certificate[] = [
     issuer: "Coursera",
     date: "2023-03",
     file: "/assets/certificates/python-for-everybody.pdf",
-    previewImage: "/assets/certificates/previews/frontend-developer.jpg"
-  },
-  {
-    id: "voxy",
-    title: "Intermediate english Certificate",
-    issuer: "Coursera",
-    date: "2023-12",
-    file: "/assets/certificates/english-voxy-intermediate.pdf",
     previewImage: "/assets/certificates/previews/frontend-developer.jpg"
   }
 ]

@@ -1,11 +1,4 @@
-export type Certificate = {
-  id: string;
-  title: string;
-  issuer: string;
-  date: string; // e.g. "2024-06"
-  file: string; // path to pdf, e.g. "/assets/certificates/frontend-dev.pdf"
-  previewImage?: string; // optional preview image path e.g. "/assets/certificates/frontend-dev.jpg"
-};
+import type { Certificate } from "../types/dataTypes";
 
 export const certificates: Certificate[] = [
   {
