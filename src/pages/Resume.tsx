@@ -2,19 +2,27 @@ import { FiDownload, FiExternalLink } from "react-icons/fi";
 import { useLanguage } from "../i18n/useLanguage";
 import { certificates } from "../data/certificates.ts";
 import { additionalCertificates } from "../data/additionalCertificates.ts";
+import { langCertificates } from "../data/langCertificates.ts";
 import { focusEffects, transitions } from "../styles/patterns";
 import CertificatesList from "../components/CertificatesList";
+import ExperienceCard from "../components/ExperienceCard.tsx";
+import IntExperienceCard from "../components/IntExperienceCard.tsx";
+import Pill from "../components/elements/Pill.tsx";
+import Divider from "../components/separators/Divider.tsx";
 
 export default function ResumePage() {
   const { t } = useLanguage();
+  const experienceArr = ["maestriPasta", "deckchairs", "cdc"]
+  const IntExperienceArr = ["farm", "hostel"]
+  const skillsArr = ["Next.js","TypeScript", "React-vite", "Tailwind CSS","Firebase","Git","HTML","CSS"]
 
-  const resumePdf = "/assets/resume.pdf"; // replace with your PDF path
+  const resumePdf = "/assets/resume.pdf"; 
 
   return (
     <div className="py-16 bg-slate-50 dark:bg-slate-800 min-h-screen transition-colors duration-200">
       <div className="max-w-4xl mx-auto px-6">
         {/* Header */}
-        <header className="mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 border-2 border-orange-500">
+        <header className="mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
           <div>
             <h1 className="text-3xl font-extrabold text-slate-900 dark:text-slate-100">
               Giorgio Valle
@@ -52,9 +60,9 @@ export default function ResumePage() {
         </header>
 
         {/* Two-column content: left main, right sidebar */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 border-2 border-green-500">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 ">
           {/* LEFT: main (experience, education) */}
-          <section className="lg:col-span-2 space-y-8 border-2 border-purple-500">
+          <section className="lg:col-span-2 space-y-8 ">
             {/* Profile */}
             <div>
               <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
@@ -64,129 +72,68 @@ export default function ResumePage() {
                 {t("pages.resume.profileText")}
               </p>
             </div>
+            <Divider variant="section" />
 
-            {/* Experience (placeholder entries) */}
+            {/* Experience */}
             <div>
               <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
                 {t("pages.resume.experienceTitle")}
               </h2>
-
-              <article className="mt-4">
-                <h3 className="font-semibold text-slate-900 dark:text-slate-100">
-                  {t("pages.resume.maestriPasta.title")}
-                </h3>
-                <div className="text-sm text-slate-600 dark:text-slate-300">
-                  <span>{t("pages.resume.maestriPasta.company")}</span> · <span>{t("pages.resume.maestriPasta.date")}</span>
+              {experienceArr.map((e, i) => (
+                <div key={e}>
+                  <ExperienceCard name={e} />
+                  {i < experienceArr.length - 1 && (<Divider variant="item" />)}
                 </div>
-                <div className="text-sm text-slate-600 dark:text-slate-300">
-                  {t("pages.resume.maestriPasta.location")}
-                </div>
-                <p className="mt-2 text-slate-700 dark:text-slate-200">
-                  {t("pages.resume.maestriPasta.description")}
-                </p>
-              </article>
-
-              <article className="mt-4">
-                <h3 className="font-semibold text-slate-900 dark:text-slate-100">
-                  {t("pages.resume.deckchairs.title")}
-                </h3>
-                <div className="text-sm text-slate-600 dark:text-slate-300">
-                  <span>{t("pages.resume.deckchairs.company")}</span> · <span>{t("pages.resume.deckchairs.date")}</span>
-                </div>
-                <div className="text-sm text-slate-600 dark:text-slate-300">
-                  {t("pages.resume.deckchairs.location")}
-                </div>
-                <p className="mt-2 text-slate-700 dark:text-slate-200">
-                  {t("pages.resume.deckchairs.description")}
-                </p>
-              </article>
-
-              <article className="mt-4">
-                <h3 className="font-semibold text-slate-900 dark:text-slate-100">
-                  {t("pages.resume.cdc.title")}
-                </h3>
-                <div className="text-sm text-slate-600 dark:text-slate-300">
-                  <span>{t("pages.resume.cdc.company")}</span> · <span>{t("pages.resume.cdc.date")}</span>
-                </div>
-                <div className="text-sm text-slate-600 dark:text-slate-300">
-                  {t("pages.resume.cdc.location")}
-                </div>
-                <p className="mt-2 text-slate-700 dark:text-slate-200">
-                  {t("pages.resume.cdc.description")}
-                </p>
-              </article>
-
-              {/* Add more experience entries here as needed */}
+              ))}
             </div>
+            <Divider variant="section"/>
 
             {/* Education */}
             <div>
-              <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
-                {t("pages.resume.certificatesMainTitle")}
-              </h2>
-              <CertificatesList certificates={certificates} showCount={3} />
-              <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
-                {t("pages.resume.educationTitle")}
-              </h2>
-              <div className="mt-4">
-                <h3 className="font-semibold text-slate-900 dark:text-slate-100">
-                  {t("pages.resume.school.degree")}
-                </h3>
-                <div className="text-sm text-slate-600 dark:text-slate-300">
-                  <span>{t("pages.resume.school.institution")}</span> · <span>{t("pages.resume.school.date")}</span>
+              <div>
+                <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
+                  {t("pages.resume.educationTitle")}
+                </h2>
+                <div className="mt-4">
+                  <h3 className="font-semibold text-slate-900 dark:text-slate-100">
+                    {t("pages.resume.school.degree")}
+                  </h3>
+                  <div className="text-sm text-slate-600 dark:text-slate-300">
+                    <span>{t("pages.resume.school.institution")}</span> · <span>{t("pages.resume.school.date")}</span>
+                  </div>
                 </div>
               </div>
+              <Divider variant="item" />
+              <div>
+                <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
+                  {t("pages.resume.certificatesMainTitle")}
+                </h2>
+                <CertificatesList certificates={certificates} />
+              </div>
             </div>
+            <Divider variant="section" />
+
+            {/* international experience*/}
             <div>
               <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
-                extra experience
+                {t("pages.resume.internationalExperienceTitle")}
               </h2>
-
-               <article className="mt-4">
-                <h3 className="font-semibold text-slate-900 dark:text-slate-100">
-                  {t("pages.resume.farm.title")}
-                </h3>
-                <div className="text-sm text-slate-600 dark:text-slate-300">
-                  <span>{t("pages.resume.farm.company")}</span> · <span>{t("pages.resume.farm.date")}</span>
+              {IntExperienceArr.map((e, i) => (
+                <div key={e}>
+                  <IntExperienceCard name={e} />
+                  {i < IntExperienceArr.length -1 && (<Divider variant="item" />)}
                 </div>
-                <div className="text-sm text-slate-600 dark:text-slate-300">
-                  {t("pages.resume.farm.location")}
-                </div>
-                <p className="mt-2 text-slate-700 dark:text-slate-200">
-                  {t("pages.resume.farm.description")}
-                </p>
-              </article>
-
-               <article className="mt-4">
-                <h3 className="font-semibold text-slate-900 dark:text-slate-100">
-                  {t("pages.resume.hostel.title")}
-                </h3>
-                <div className="text-sm text-slate-600 dark:text-slate-300">
-                  <span>{t("pages.resume.hostel.company")}</span> · <span>{t("pages.resume.hostel.date")}</span>
-                </div>
-                <div className="text-sm text-slate-600 dark:text-slate-300">
-                  {t("pages.resume.hostel.location")}
-                </div>
-                <p className="mt-2 text-slate-700 dark:text-slate-200">
-                  {t("pages.resume.hostel.description")}
-                </p>
-              </article>
+              ))}
             </div>
           </section>
 
           {/* RIGHT: sidebar (skills, languages, certificates) */}
-          <aside className="space-y-6 border-2 border-sky-500">
+          <aside className="space-y-6 ">
             {/* Skills */}
             <div className="bg-white dark:bg-slate-700 rounded-2xl p-4 ring-1 ring-slate-200 dark:ring-slate-700">
               <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">{t("pages.resume.skillsTitle")}</h3>
               <ul className="mt-3 flex flex-wrap gap-2">
-                {["TypeScript", "React", "Tailwind CSS", "Node.js", "Firebase"].map((s) => (
-                  <li key={s}>
-                    <span className="inline-block px-3 py-1 text-xs rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">
-                      {s}
-                    </span>
-                  </li>
-                ))}
+                {skillsArr.map(s => <li key={s}><Pill>{s}</Pill></li>)}
               </ul>
             </div>
 
@@ -194,7 +141,10 @@ export default function ResumePage() {
             <div className="bg-white dark:bg-slate-700 rounded-2xl p-4 ring-1 ring-slate-200 dark:ring-slate-700">
               <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">{t("pages.resume.languagesTitle")}</h3>
               <ul className="mt-3 text-sm text-slate-700 dark:text-slate-200">
-                <li>{t("pages.resume.languageEnglish")}</li>
+                <li>
+                  {t("pages.resume.languageEnglish")}
+                  <CertificatesList certificates={langCertificates} />
+                </li>
                 <li>{t("pages.resume.languageItalian")}</li>
               </ul>
             </div>
@@ -202,37 +152,10 @@ export default function ResumePage() {
             {/* Certificates */}
             <div className="bg-white dark:bg-slate-700 rounded-2xl p-4 ring-1 ring-slate-200 dark:ring-slate-700">
               <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">{t("pages.resume.certificatesTitle")}</h3>
-
-              <ul className="mt-3 space-y-3">
-                {additionalCertificates.map((c) => (
-                  <li key={c.id} className="flex items-start justify-between gap-3">
-                    <div>
-                      <div className="text-sm font-medium text-slate-900 dark:text-slate-100">{c.title}</div>
-                      <div className="text-xs text-slate-600 dark:text-slate-300">{c.issuer} · {c.date}</div>
-                    </div>
-
-                    <div className="flex items-center gap-2">
-                      <a
-                        href={c.file}
-                        download
-                        className={`inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[var(--accent)] text-white text-xs ${transitions} ${focusEffects}`}
-                        aria-label={`${t("resume.downloadCertificate")} ${c.title}`}
-                      >
-                        <FiDownload className="w-3 h-3" />
-                        <span>{t("resume.download")}</span>
-                      </a>
-                    </div>
-                  </li>
-                ))}
-              </ul>
+              <CertificatesList certificates={additionalCertificates} />
             </div>
           </aside>
         </div>
-
-        {/* Small print */}
-        <p className="mt-10 text-xs text-slate-500 dark:text-slate-400">
-          {t("resume.note")}
-        </p>
       </div>
     </div>
   );
