@@ -1,5 +1,5 @@
 import { FiEye } from "react-icons/fi";
-import type { Certificate } from "../data/certificates";
+import type { Certificate } from "../types/dataTypes";
 import { focusEffects, transitions } from "../styles/patterns";
 import { useLanguage } from "../i18n/useLanguage";
 
@@ -20,16 +20,16 @@ export default function CertificateCard({ certificate, onView }: Props) {
       `}
       aria-labelledby={`cert-${certificate.id}-title`}
     >
-      <div className="flex-1 flex flex-col items-center justify-center  md:flex-2 ">
+      <div className="flex-2 flex flex-col items-center justify-center  md:flex-2 ">
         <h3 id={`cert-${certificate.id}-title`} className="text-sm text-center font-semibold text-slate-900 dark:text-slate-100">
           {certificate.title}
         </h3>
+        <p 
+          className="text-xs text-slate-600 dark:text-slate-300 "
+         >{certificate.issuer} · {certificate.date}
+         </p>
       </div>
-      <div className="text-xs flex-1 flex flex-col items-center justify-center  text-slate-600 dark:text-slate-300 ">
-        <p>{certificate.issuer}</p>
-        <p>{certificate.date}</p>
-      </div>
-      <div className="flex flex-1 md:flex-2 items-center w-full justify-center gap-2 ">
+      <div className="flex flex-1 items-center w-full justify-center gap-2 ">
         <button
           type="button"
           onClick={() => onView(certificate)}
