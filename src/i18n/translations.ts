@@ -101,6 +101,7 @@ export const translations: Record<Lang, NestedStrings> = {
         profileText:
           "I am a front-end developer with experience building performant and accessible web applications. I focus on JavaScript, React and modern CSS workflows. I enjoy turning complex problems into simple, beautiful UI.",
         experienceTitle: "Experience",
+        internationalExperienceTitle: "International Experiences",
         maestriPasta: {
           title: "Assistant Manager",
           location: "London",
@@ -109,32 +110,30 @@ export const translations: Record<Lang, NestedStrings> = {
           description: "Managed kitchen operations, stock control, and daily workflow to ensure smooth service. Supervised food preparation, including fresh pasta production, and supported the team in maintaining high standards of quality, organization, and efficiency."
         },
         deckchairs: {
-          title: "Attendant",
-          company: "Royal Parks, deckchairs",
-          date: "2014-2018",
-          location: "Londra",
-          description: ``
+          title: "Deckchair Attendant",
+          company: "Deckchairs ltd",
+          date: "2007; 2012; 2014-2019",
+          location: "Royal Parks, London",
+          description: `Worked seasonally in the Royal Parks of London, managing deckchairs and assisting visitors throughout the park. The role involved handling a high volume of customers, often from many different countries, which helped strengthen my English and improve my communication skills in a multicultural environment. It also required strong organisation, customer service, and the ability to manage multiple requests at the same time.`
         },
         cdc: {
-          title: "Attendant",
+          title: "IT Support Consultant",
           company: "CDC Bergamo",
           date: "2000-2002",
           location: "Bergamo",
-          description: ``
+          description: `Provided technical support in a computer repair workshop, repairing PCs, assembling new computers, and assisting customers by phone. Gained hands-on experience in hardware troubleshooting, system setup, and customer support.`
         },
         farm: {
-          title: "Attendant",
-          company: "CDC Bergamo",
+          title: "Australia",
           date: "2013-2014",
-          location: "Cairns Australia",
-          description: ``
+          location: "Cairns - Mareeba",
+          description: `Lived and worked for one year in the Australian Outback, an experience that had a profound personal impact and remains my most meaningful work experience. The role involved working both in the fields, harvesting limes, and in the packing shed, preparing and packaging produce for distribution. Beyond the job itself, this experience represented a unique opportunity to live in a remote environment, develop resilience, adaptability, and a strong sense of independence, while fully immersing myself in Australian rural life.`
         },
         hostel: {
-          title: "Attendant",
-          company: "CDC Bergamo",
+          title: "USA",
           date: "2002-2005",
-          location: "Los Angeles/San Diego",
-          description: ``
+          location: "Los Angeles - San Diego",
+          description: `My first experience outside Italy, and a defining step in my personal and cultural growth. Living and working in the United States was both challenging and exciting, particularly due to the language barrier and cultural differences. I worked in hostels, pubs, and music events, gaining hands-on experience in fast-paced, international environments. This experience sparked my passion for global cultures, different languages, and diverse lifestyles, and strengthened my adaptability, communication skills, and openness to new perspectives.`
         },
         educationTitle: "Education",
         certificatesMainTitle : "Key Certifications",
@@ -252,6 +251,7 @@ export const translations: Record<Lang, NestedStrings> = {
     profileText:
       "Sono uno sviluppatore front-end con esperienza nella costruzione di applicazioni web performanti e accessibili. Mi focalizzo su JavaScript, React e moderne pratiche CSS. Mi piace trasformare problemi complessi in interfacce semplici e curate.",
     experienceTitle: "Esperienza",
+    internationalExperienceTitle: "Esperienze Internazionali",
     maestriPasta: {
       title: "Assistant Manager",
       company: "Maestri della Pasta",
@@ -260,32 +260,30 @@ export const translations: Record<Lang, NestedStrings> = {
       description: "Ho gestito le operazioni della cucina, il controllo delle scorte e l’organizzazione del lavoro quotidiano, garantendo un servizio fluido ed efficiente. Mi occupavo anche della preparazione dei cibi, inclusa la produzione di pasta fresca, supportando il team nel mantenimento di elevati standard di qualità, ordine e produttività."
     },
     deckchairs: {
-      title: "Attendant",
-      company: "Royal Parks, deckchairs",
-      date: "2014-2018",
-      location: "Londra",
-      description: ``
+      title: "Addetto ai servizi nel parco",
+      company: "Deckchairs ltd",
+      date: "2007; 2012; 2014-2019",
+      location: "Royal Parks, Londra",
+      description: `Ho lavorato stagionalmente nei Royal Parks di Londra, occupandomi della gestione delle sdraio e dell’assistenza ai visitatori all’interno del parco. Il ruolo prevedeva la gestione di un alto numero di clienti, spesso provenienti da diversi Paesi, e mi ha aiutato a migliorare molto l’inglese e le mie capacità di comunicazione in un contesto multiculturale. Mi ha inoltre permesso di sviluppare capacità organizzative, di assistenza al cliente e di gestione di più richieste contemporaneamente.`
     },
     cdc: {
-      title: "Attendant",
+      title: "Consulente IT",
       company: "CDC Bergamo",
       date: "2000-2002",
       location: "Bergamo",
-      description: ``
+      description: `Ho lavorato in un laboratorio di assistenza e riparazione computer, occupandomi della riparazione di PC, dell’assemblaggio di nuovi computer e dell’assistenza ai clienti per telefono. Ho acquisito esperienza pratica nella risoluzione di problemi hardware, nell’installazione dei sistemi e nel supporto tecnico ai clienti.`
     },
     farm: {
-      title: "Attendant",
-      company: "CDC Bergamo",
+      title: "Australia",
       date: "2013-2014",
-      location: "Cairns Australia",
-      description: ``
+      location: "Cairns - Mareeba",
+      description: `Ho vissuto e lavorato per un anno nell’Outback australiano, un’esperienza che ha avuto un forte impatto personale ed è stata di gran lunga una delle più significative della mia vita. Il lavoro si svolgeva in due aree principali: nei campi, occupandomi della raccolta dei lime, e nel capannone di confezionamento, dedicato alla selezione e all’imballaggio del prodotto. Al di là dell’attività lavorativa, questa esperienza mi ha permesso di vivere in un contesto remoto, sviluppare grande capacità di adattamento, resilienza e autonomia, e immergermi completamente nella realtà rurale australiana.`
     },
     hostel: {
-      title: "Attendant",
-      company: "CDC Bergamo",
+      title: "USA",
       date: "2002-2005",
-      location: "Los Angeles/San Diego",
-      description: ``
+      location: "Los Angeles - San Diego",
+      description: `È stata la mia prima esperienza fuori dall’Italia e ha rappresentato una tappa fondamentale nella mia crescita personale e culturale. Vivere e lavorare negli Stati Uniti è stato stimolante ma anche impegnativo, soprattutto per la lingua e le differenze culturali. Ho lavorato in ostelli, pub ed eventi musicali, entrando in contatto con ambienti dinamici e internazionali. Questa esperienza mi ha fatto innamorare delle culture internazionali, delle lingue e dei diversi stili di vita, aiutandomi a sviluppare capacità di adattamento, comunicazione e apertura mentale.`
     },
     educationTitle: "Istruzione",
     certificatesMainTitle : "Certificazioni Principali",
