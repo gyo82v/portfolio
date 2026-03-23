@@ -44,7 +44,7 @@ export default function About({
 
           <div className="flex flex-col gap-10 md:flex-row">
             <AboutSection title="pages.home.about.certsTitle">
-              <CertificatesList certificates={certificates} showCount={3} />
+              <CertificatesList certificates={certificates} />
             </AboutSection>
             <AboutSection title="pages.home.about.skillsTitle">
               <div className="flex flex-col gap-6 justify-between h-full">
