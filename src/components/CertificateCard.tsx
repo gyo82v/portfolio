@@ -6,9 +6,10 @@ import { useLanguage } from "../i18n/useLanguage";
 type Props = {
   certificate: Certificate;
   onView: (c: Certificate) => void; 
+  className?: string
 };
 
-export default function CertificateCard({ certificate, onView }: Props) {
+export default function CertificateCard({ certificate, onView, className }: Props) {
   const { t } = useLanguage();
 
   return (
@@ -17,6 +18,7 @@ export default function CertificateCard({ certificate, onView }: Props) {
         flex items-center gap-2 md:gap-3 p-3 md:p-4 rounded-2xl 
         bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200
         overflow-hidden ring-1 ring-slate-200 dark:ring-slate-700
+        ${className}
       `}
       aria-labelledby={`cert-${certificate.id}-title`}
     >
@@ -29,7 +31,7 @@ export default function CertificateCard({ certificate, onView }: Props) {
          >{certificate.issuer} · {certificate.date}
          </p>
       </div>
-      <div className="flex flex-1 items-center w-full justify-center gap-2 ">
+      <div className="flex flex-1 items-center w-full justify-center gap-2  ">
         <button
           type="button"
           onClick={() => onView(certificate)}
