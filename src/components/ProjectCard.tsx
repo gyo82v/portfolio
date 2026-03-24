@@ -1,6 +1,7 @@
 import { useLanguage } from "../i18n/useLanguage";
 import type { ProjectData } from "../data/projects";
 import { focusEffects, transitions } from "../styles/patterns";
+import Pill from "./elements/Pill";
 
 export default function ProjectCard({ project }: { project: ProjectData }) {
   const { t } = useLanguage();
@@ -46,16 +47,7 @@ export default function ProjectCard({ project }: { project: ProjectData }) {
         </p>
 
         <div className="mt-3 flex flex-wrap gap-2">
-          {project.techKeys.map((tk) => (
-            <span
-              key={tk}
-              className="text-xs px-2 py-1 rounded-md
-                bg-slate-100 dark:bg-slate-800
-                text-slate-700 dark:text-slate-200"
-            >
-              {t(tk)}
-            </span>
-          ))}
+          {project.techKeys.map(t => <Pill key={t} className="rounded-md">{t}</Pill>)}
         </div>
 
         {/* REAL LINKS */}
