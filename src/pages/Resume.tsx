@@ -9,6 +9,7 @@ import ExperienceCard from "../components/ExperienceCard.tsx";
 import IntExperienceCard from "../components/IntExperienceCard.tsx";
 import Pill from "../components/elements/Pill.tsx";
 import Divider from "../components/separators/Divider.tsx";
+import { HiChevronRight } from "react-icons/hi";
 
 export default function ResumePage() {
   const { t } = useLanguage();
@@ -20,9 +21,9 @@ export default function ResumePage() {
 
   return (
     <div className="py-16 bg-slate-50 dark:bg-slate-800 min-h-screen transition-colors duration-200">
-      <div className="max-w-4xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
-        <header className="mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+        <header className="mb-8 lg:mb-18 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-10">
           <div>
             <h1 className="text-3xl font-extrabold text-slate-900 dark:text-slate-100">
               Giorgio Valle
@@ -58,17 +59,18 @@ export default function ResumePage() {
             </a>
           </div>
         </header>
+        <Divider variant="section" />
 
         {/* Two-column content: left main, right sidebar */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 ">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 ">
           {/* LEFT: main (experience, education) */}
           <section className="lg:col-span-2 space-y-8 ">
             {/* Profile */}
             <div>
-              <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
+              <h2 className="text-lg font-bold text-slate-900 dark:text-slate-100 text-center mb-4 lg:mb-6">
                 {t("pages.resume.profileTitle")}
               </h2>
-              <p className="mt-2 text-slate-700 dark:text-slate-200">
+              <p className="mt-2 text-slate-700 dark:text-slate-200 text-center">
                 {t("pages.resume.profileText")}
               </p>
             </div>
@@ -76,7 +78,7 @@ export default function ResumePage() {
 
             {/* Experience */}
             <div>
-              <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
+              <h2 className="text-lg font-bold text-slate-900 dark:text-slate-100 text-center mb-6 lg:mb-10">
                 {t("pages.resume.experienceTitle")}
               </h2>
               {experienceArr.map((e, i) => (
@@ -90,8 +92,8 @@ export default function ResumePage() {
 
             {/* Education */}
             <div>
-              <div>
-                <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
+              <div className="mb-8">
+                <h2 className="text-lg font-bold text-slate-900 dark:text-slate-100 text-center mb-6 lg:mb-10">
                   {t("pages.resume.educationTitle")}
                 </h2>
                 <div className="mt-4">
@@ -103,11 +105,10 @@ export default function ResumePage() {
                   </div>
                 </div>
               </div>
-              <Divider variant="item" />
               <div>
-                <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
+                <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-6 lg:mb-8">
                   {t("pages.resume.certificatesMainTitle")}
-                </h2>
+                </h3>
                 <CertificatesList certificates={certificates} />
               </div>
             </div>
@@ -115,7 +116,7 @@ export default function ResumePage() {
 
             {/* international experience*/}
             <div>
-              <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
+              <h2 className="text-lg font-bold text-slate-900 dark:text-slate-100 text-center mb-6 lg:mb-10">
                 {t("pages.resume.internationalExperienceTitle")}
               </h2>
               {IntExperienceArr.map((e, i) => (
@@ -130,29 +131,45 @@ export default function ResumePage() {
           {/* RIGHT: sidebar (skills, languages, certificates) */}
           <aside className="space-y-6 ">
             {/* Skills */}
-            <div className="bg-white dark:bg-slate-700 rounded-2xl p-4 ring-1 ring-slate-200 dark:ring-slate-700">
-              <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">{t("pages.resume.skillsTitle")}</h3>
-              <ul className="mt-3 flex flex-wrap gap-2">
-                {skillsArr.map(s => <li key={s}><Pill>{s}</Pill></li>)}
+            <div className="bg-white dark:bg-slate-700 rounded-2xl p-4 lg:p-6 ring-1 ring-slate-200 dark:ring-slate-700">
+              <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-4">
+                {t("pages.resume.skillsTitle")}
+              </h3>
+              <ul className="flex flex-wrap gap-2 lg:gap-3">
+                {skillsArr.map(s => <li key={s}><Pill className="lg:px-5 lg:py-2">{s}</Pill></li>)}
               </ul>
             </div>
 
             {/* Languages */}
-            <div className="bg-white dark:bg-slate-700 rounded-2xl p-4 ring-1 ring-slate-200 dark:ring-slate-700">
-              <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">{t("pages.resume.languagesTitle")}</h3>
-              <ul className="mt-3 text-sm text-slate-700 dark:text-slate-200">
-                <li>
-                  {t("pages.resume.languageEnglish")}
-                  <CertificatesList certificates={langCertificates} />
+            <div className="bg-white dark:bg-slate-700 rounded-2xl p-4 lg:p-6 ring-1 ring-slate-200 dark:ring-slate-700">
+              <h3 className=" font-semibold text-slate-900 dark:text-slate-100 mb-4">
+                {t("pages.resume.languagesTitle")}
+              </h3>
+              <ul className="text-sm text-slate-700 dark:text-slate-200 ">
+                <li className="flex gap-3 mb-4">
+                   <HiChevronRight className="text-teal-500 mt-1 shrink-0" />
+                  <div className="flex flex-col gap-3">
+                    {t("pages.resume.languageEnglish")}
+                    <CertificatesList certificates={langCertificates} />
+                  </div>
                 </li>
-                <li>{t("pages.resume.languageItalian")}</li>
+                <li className="flex gap-3">
+                  <HiChevronRight className="text-teal-500 mt-1 shrink-0" />
+                  <span>{t("pages.resume.languageItalian")}</span>
+                </li>
               </ul>
             </div>
 
             {/* Certificates */}
-            <div className="bg-white dark:bg-slate-700 rounded-2xl p-4 ring-1 ring-slate-200 dark:ring-slate-700">
-              <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">{t("pages.resume.certificatesTitle")}</h3>
-              <CertificatesList certificates={additionalCertificates} />
+            <div className="bg-white dark:bg-slate-700 rounded-2xl p-4 lg:p-6 ring-1 ring-slate-200 dark:ring-slate-700">
+              <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-4 lg:mb-6">
+                {t("pages.resume.certificatesTitle")}
+              </h3>
+              <CertificatesList 
+                certificates={additionalCertificates} 
+                className="py-6 lg:py-8"
+                listClassName="lg:gap-6"
+              />
             </div>
           </aside>
         </div>

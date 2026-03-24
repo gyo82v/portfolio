@@ -1,4 +1,3 @@
-// src/data/projects.ts
 export interface ProjectData {
   id: string;
   titleKey: string;      // translation key for title, e.g. 'projects.jadeLily.title'

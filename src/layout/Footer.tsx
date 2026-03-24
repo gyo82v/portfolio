@@ -9,7 +9,7 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 transition-colors duration-200">
-      <div className="mx-auto max-w-6xl px-6 py-8">
+      <div className="mx-auto w-full px-6 py-8 lg:px-8">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="text-lg font-semibold text-slate-900 dark:text-slate-100">

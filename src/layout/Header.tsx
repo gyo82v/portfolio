@@ -1,8 +1,6 @@
-// src/layout/Header.tsx
 import { NavLink } from "react-router";
 import { FiSun, FiMoon } from "react-icons/fi";
 import { useTheme } from "../theme/useTheme";
-import clsx from "clsx";
 import { useLanguage } from "../i18n/useLanguage";
 import { FaGlobe } from "react-icons/fa";
 
@@ -11,7 +9,7 @@ export default function Header() {
   const { lang, setLang, t } = useLanguage();
 
   // static color classes for Tailwind to detect
-  const navBase = "text-slate-700 dark:text-slate-200";
+  const navBase = "text-slate-700 dark:text-slate-200 hover:underline";
 
   const toggleLang = () => {
     setLang(lang === "en" ? "it" : "en");
@@ -19,9 +17,9 @@ export default function Header() {
 
   return (
     <header className="bg-transparent">
-      <nav className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+      <nav className="w-full mx-auto p-4 lg:px-10 lg:py-6 flex items-center justify-between">
         {/* Nav links */}
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-6 lg:gap-12">
           {[
             { to: "/", labelKey: "nav.home" },
             { to: "resume", labelKey: "nav.resume" },
@@ -30,12 +28,7 @@ export default function Header() {
             <NavLink
               key={link.to}
               to={link.to}
-              className={({ isActive }) =>
-                clsx(
-                  navBase, 
-                  isActive && "underline" 
-                )
-              }
+              className={({isActive}) => isActive ? `${navBase} underline` : `${navBase}`}
             >
               {t(link.labelKey)}
             </NavLink>

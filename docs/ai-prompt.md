@@ -1,71 +1,47 @@
-here is the component as it was at the start :
+now i have to set up my homepage for my portfolio.
 
-import { NavLink } from 'react-router';
-import { FiSun, FiMoon } from 'react-icons/fi';
-import { useTheme } from '../theme/useTheme';
+at the moment i think i will add these sections :
 
-export default function Header() {
-  const { theme, toggleTheme } = useTheme();
-  const style = "text-sm font-medium text-slate-700 dark:text-slate-200"
+1 hero section : 
+  - an h1 with my name
+  - an h2 with a brief description like "full-stack developer..."
+  - an image of myself
 
-  return (
-    <header className="bg-transparent">
-      <nav className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-6 ">
-          <NavLink 
-            to="/" 
-            className={({isActive}) => isActive ? `${style} underline` : `${style}`}
-          >Home
-          </NavLink>
-          <NavLink 
-            to="resume" 
-            className={({isActive}) => isActive ? `${style} underline` : `${style}`}
-          >Resume
-          </NavLink>
-          <NavLink 
-            to="projects" 
-            className={({isActive}) => isActive ? `${style} underline` : `${style}`}
-          >Projects
-          </NavLink>
-        </div>
+2 projects section:
+  - a list of my main three projects each with a title, description of the project, technologies 
+    used in the project and a link to the live project for example to my jade lili project => jade-lily.vercel.app
 
-        {/* Right side controls: theme toggle (and later language) */}
-        <div className="flex items-center gap-3">
-          <button
-            onClick={toggleTheme}
-            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-            title={theme === 'dark' ? 'Light mode' : 'Dark mode'}
-            className="p-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-teal-400"
-          >
-            {theme === 'dark' ? (
-              <FiSun className="w-5 h-5 text-teal-400" />
-            ) : (
-              <FiMoon className="w-5 h-5 text-teal-600" />
-            )}
-          </button>
+3 about me section:
+  - a title
+  - a subtitle
+  - a description
+  - a list of my skills
+  - a link to my resume
 
-          {/* placeholder for language toggle later */}
-        </div>
-      </nav>
-    </header>
-  );
-}
+4 contacts section :
+  - a title like "get in touch" or something similar
+  - a little description(optional)
+  - my contact info like a mail icons to sen me an email;
 
-and i still have the initial problem that the text color is stuck on text-slate-200
+here :
 
-- adding ! on either of the text-slate-700 dark:text-slate-200 will not work.
-  in this case the text color will be text-slate-700 always.
-- adding color to the outer div did not work.
+<div className="bg-white dark:bg-slate-700 rounded-2xl p-4 lg:p-6 ring-1 ring-slate-200 dark:ring-slate-700">
+              <h3 className=" font-semibold text-slate-900 dark:text-slate-100">{t("pages.resume.languagesTitle")}</h3>
+              <ul className="mt-3 text-sm text-slate-700 dark:text-slate-200 list-disc pl-5">
+                <li className="flex flex-col gap-3 mb-4">
+                  {t("pages.resume.languageEnglish")}
+                 <CertificatesList certificates={langCertificates} />
+                </li>
+                <li>{t("pages.resume.languageItalian")}</li>
+              </ul>
+            </div>
 
 
-what is the difference between :
+how can i add the dot or other symbol for each li item ?
 
-mine : className={({isActive}) => isActive ? `${style} underline` : `${style}`}
-your : className={({isActive}) => 
-      `text-slate-700 dark:text-slate-200 ${isActive ? "underline" : ""}`
-    }
+what symbols i can add with tailwind ?
 
-what does change between isActive : "": "" and  `${isActive ? "" : ""}`
+
 
 
 
