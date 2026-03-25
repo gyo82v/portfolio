@@ -5,7 +5,7 @@ export default function Divider({variant = "item"}: {variant: "section" | "item"
     return (
       <div
         aria-hidden="true"
-        className={`my-12 w-full`}
+        className={`my-14 w-full`}
       >
         <div className="h-px w-full bg-slate-300 dark:bg-slate-600" />
       </div>
@@ -15,7 +15,7 @@ export default function Divider({variant = "item"}: {variant: "section" | "item"
   return (
     <div
       aria-hidden="true"
-      className={`my-8 flex w-full items-center justify-center`}
+      className={`my-12 flex w-full items-center justify-center`}
     >
       <div className="h-px w-12 bg-slate-200 dark:bg-slate-700" />
       <span className="mx-3 h-2 w-2 rounded-full bg-slate-400 dark:bg-slate-500" />
