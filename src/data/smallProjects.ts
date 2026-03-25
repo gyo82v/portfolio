@@ -10,7 +10,8 @@ export interface ProjectData {
   type?: string
 }
 
-export const projects: ProjectData[] = [
+
+export const smallProjects: ProjectData[] = [
   {
     id: "jade-lily",
     titleKey: "pages.home.projects.jadeLily.title",
@@ -31,7 +32,7 @@ export const projects: ProjectData[] = [
     imageAltKey: "pages.home.projects.chefMistral.imageAlt",
     liveUrl: "https://friendly-moonbeam-f330df.netlify.app/",
     repoUrl: "https://github.com/yourusername/chef-mistral",
-    type:"ai"
+    type: "game"
   },
   {
     id: "Arcadium",
@@ -42,6 +43,6 @@ export const projects: ProjectData[] = [
     imageAltKey: "pages.home.projects.arcadium.imageAlt",
     liveUrl: "https://resonant-starship-25cd8f.netlify.app/",
     repoUrl: "https://github.com/yourusername/battleship",
-    type: "game"
+    type: "ai"
   }
 ];
