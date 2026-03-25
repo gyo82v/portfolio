@@ -1,67 +1,109 @@
+import { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router";
-import { FiSun, FiMoon } from "react-icons/fi";
+import { FiSun, FiMoon, FiMenu } from "react-icons/fi";
+import { FaGlobe } from "react-icons/fa";
 import { useTheme } from "../theme/useTheme";
 import { useLanguage } from "../i18n/useLanguage";
-import { FaGlobe } from "react-icons/fa";
+import { focusEffects, transitions } from "../styles/patterns";
+import MobileMenu from "./MobileMenu";
 
 export default function Header() {
   const { theme, toggleTheme } = useTheme();
   const { lang, setLang, t } = useLanguage();
 
-  // static color classes for Tailwind to detect
-  const navBase = "text-slate-700 dark:text-slate-200 hover:underline";
+  const [menuMounted, setMenuMounted] = useState(false);
+  const [menuVisible, setMenuVisible] = useState(false);
+  const closeTimeoutRef = useRef<number | null>(null);
 
-  const toggleLang = () => {
-    setLang(lang === "en" ? "it" : "en");
+  const navBase = `text-slate-700 dark:text-slate-200 hover:underline ${focusEffects} ${transitions}`;
+  const toggleLang = () => setLang(lang === "en" ? "it" : "en");
+
+  const links = [
+    { to: "/", label: t("nav.home") },
+    { to: "resume", label: t("nav.resume") },
+    { to: "projects", label: t("nav.projects") },
+  ];
+
+  const openMenu = () => {
+    if (closeTimeoutRef.current) {
+      window.clearTimeout(closeTimeoutRef.current);
+    }
+    setMenuMounted(true);
+    requestAnimationFrame(() => setMenuVisible(true));
   };
 
+  const closeMenu = () => {
+    setMenuVisible(false);
+    closeTimeoutRef.current = window.setTimeout(() => {
+      setMenuMounted(false);
+    }, 250);
+  };
+
+  useEffect(() => {
+    if (!menuMounted) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeMenu();
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [menuMounted]);
+
   return (
-    <header className="bg-transparent">
-      <nav className="w-full mx-auto p-4 lg:px-10 lg:py-6 flex items-center justify-between">
-        {/* Nav links */}
-        <div className="flex items-center gap-6 lg:gap-12">
-          {[
-            { to: "/", labelKey: "nav.home" },
-            { to: "resume", labelKey: "nav.resume" },
-            { to: "projects", labelKey: "nav.projects" },
-          ].map((link) => (
+    <header className="relative">
+      <nav className="w-full p-4 lg:px-10 lg:py-6 flex items-center justify-between">
+        {/* Desktop links */}
+        <div className="hidden lg:flex gap-12">
+          {links.map((link) => (
             <NavLink
               key={link.to}
               to={link.to}
-              className={({isActive}) => isActive ? `${navBase} underline` : `${navBase}`}
+              className={({ isActive }) =>
+                isActive ? `${navBase} underline` : navBase
+              }
             >
-              {t(link.labelKey)}
+              {link.label}
             </NavLink>
           ))}
         </div>
 
-        {/* Right side: theme + language toggle */}
-        <div className="flex items-center gap-3">
-          {/* Language toggle: small segmented button EN | IT */}
-          <div className="flex items-center gap-2">
-            <button
-              onClick={toggleLang}
-              aria-label={t("lang.ariaToggle")}
-              title={lang === "en" ? "Switch to Italiano" : "Passa a English"}
-              className="flex items-center gap-2 px-2 py-1 rounded-md border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-teal-400"
-            >
-              <FaGlobe className="w-4 h-4" />
-              <span className="sr-only">{t("lang.ariaToggle")}</span>
-              <span className="text-sm font-medium">{lang === "en" ? "EN" : "IT"}</span>
-            </button>
-          </div>
+        {/* Mobile menu button */}
+        <button
+          onClick={openMenu}
+          aria-label="Open navigation menu"
+          className={`lg:hidden p-2 rounded-md border border-slate-200 dark:border-slate-700 hover:scale-105 ${focusEffects} ${transitions}`}
+        >
+          <FiMenu className="w-5 h-5" />
+        </button>
 
-          {/* Theme toggle */}
+        {/* Controls */}
+        <div className="flex items-center gap-3 lg:gap-10 lg:mr-10">
           <button
-            onClick={toggleTheme}
-            aria-label={theme === "dark" ? t("theme.switchToLight") : t("theme.switchToDark")}
-            title={theme === "dark" ? t("theme.lightMode") : t("theme.darkMode")}
-            className="p-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-teal-400"
+            onClick={toggleLang}
+            className={`flex items-center gap-2 px-2 py-1 rounded-md border ${focusEffects}`}
           >
-            {theme === "dark" ? <FiSun className="w-5 h-5 text-teal-400" /> : <FiMoon className="w-5 h-5 text-teal-600" />}
+            <FaGlobe className="w-4 h-4" />
+            <span className="text-sm font-medium">{lang === "en" ? "EN" : "IT"}</span>
+          </button>
+
+          <button onClick={toggleTheme} className={`p-2 rounded-md ${focusEffects}`}>
+            {theme === "dark" ? <FiSun /> : <FiMoon />}
           </button>
         </div>
       </nav>
+
+      <MobileMenu
+        mounted={menuMounted}
+        visible={menuVisible}
+        links={links}
+        onClose={closeMenu}
+      />
     </header>
   );
 }
