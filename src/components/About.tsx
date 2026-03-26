@@ -7,10 +7,9 @@ import AboutSection from "./AboutSection";
 import { HiOutlineDocumentText } from "react-icons/hi";
 import Pill from "./elements/Pill";
 
-export default function About({
-  skills = ["Next.js","React-vite","TypeScript","Git", "Tailwind CSS", "Firebase", "Javascript","HTML", "CSS"]
-}: {skills? : string[]}) {
+export default function About() {
   const { t } = useLanguage();
+  const skills = ["Next.js","React-vite","TypeScript","Git", "Tailwind CSS", "Firebase", "Javascript","HTML", "CSS"]
 
   return (
     <section
