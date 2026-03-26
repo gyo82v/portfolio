@@ -1,63 +1,13 @@
-import  ProjectCard  from "../components/ProjectCard";
+import ProjectCard from "../components/ProjectCard";
 import { useLanguage } from "../i18n/useLanguage";
 import { projects } from "../data/projects";
 import { smallProjects } from "../data/smallProjects";
 
-type ProjectType = "website" | "game" | "ai";
-
-type CategorizedProject = (typeof smallProjects)[number] & {
-  type: ProjectType;
-};
-
-const sectionOrder: ProjectType[] = ["website", "game", "ai"];
-
-const sectionMeta: Record<
-  ProjectType,
-  {
-    titleKey: string;
-    descriptionKey: string;
-  }
-> = {
-  website: {
-    titleKey: "pages.projects.sections.website.title",
-    descriptionKey: "pages.projects.sections.website.description",
-  },
-  game: {
-    titleKey: "pages.projects.sections.games.title",
-    descriptionKey: "pages.projects.sections.games.description",
-  },
-  ai: {
-    titleKey: "pages.projects.sections.ai.title",
-    descriptionKey: "pages.projects.sections.ai.description",
-  },
-};
-
-function groupProjectsByType(items: CategorizedProject[]) {
-  return items.reduce<Record<ProjectType, CategorizedProject[]>>(
-    (acc, project) => {
-      const type = project.type;
-
-      if (!acc[type]) {
-        acc[type] = [];
-      }
-
-      acc[type].push(project);
-      return acc;
-    },
-    {
-      website: [],
-      game: [],
-      ai: [],
-    }
-  );
-}
-
 export default function ProjectsPage() {
   const { t } = useLanguage();
-  const typedSmallProjects = smallProjects as CategorizedProject[];
-  const groupedProjects = groupProjectsByType(typedSmallProjects);
 
   const featuredProjects = projects;
+  const otherProjects = smallProjects;
 
   return (
     <main className="min-h-screen">
@@ -85,7 +35,7 @@ export default function ProjectsPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {featuredProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
@@ -102,31 +52,12 @@ export default function ProjectsPage() {
           </p>
         </div>
 
-        <div className="space-y-12">
-          {sectionOrder.map((type) => {
-            const items = groupedProjects[type];
-
-            if (items.length === 0) return null;
-
-            return (
-              <section key={type} className="space-y-5">
-                <div className="max-w-3xl">
-                  <h3 className="text-xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-2xl">
-                    {t(sectionMeta[type].titleKey)}
-                  </h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300 sm:text-base">
-                    {t(sectionMeta[type].descriptionKey)}
-                  </p>
-                </div>
-
-                <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-2">
-                  {items.map((project) => (
-                    <ProjectCard key={project.id} project={project} />
-                  ))}
-                </div>
-              </section>
-            );
-          })}
+        <div className="rounded-2xl bg-slate-100 p-4 dark:bg-slate-900/40 sm:p-6">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+             {otherProjects.map((project) => (
+               <ProjectCard key={project.id} project={project} />
+             ))}
+          </div>
         </div>
       </section>
 
