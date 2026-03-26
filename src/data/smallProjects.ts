@@ -1,48 +1,55 @@
-export interface ProjectData {
-  id: string;
-  titleKey: string;      // translation key for title, e.g. 'projects.jadeLily.title'
-  descKey: string;       // translation key for description, e.g. 'projects.jadeLily.description'
-  techKeys: string[];    // array of translation keys for tech names, e.g. ['tech.nextjs']
-  image: string;         // path to screenshot image
-  imageAltKey: string;   // translation key for the image alt text, interpolation with {name} if needed
-  liveUrl: string;       // live demo url
-  repoUrl?: string;      // optional repo url
-  type?: string
-}
+import type { ProjectDataType } from "../types/dataTypes";
 
-
-export const smallProjects: ProjectData[] = [
+export const smallProjects: ProjectDataType[] = [
   {
-    id: "jade-lily",
-    titleKey: "pages.home.projects.jadeLily.title",
-    descKey: "pages.home.projects.jadeLily.description",
-    techKeys: ["Next.js", "Firebase", "Tailwind"],
-    image: "src/images/jade-lily.png",
-    imageAltKey: "pages.home.projects.jadeLily.imageAlt",
-    liveUrl: "https://jade-lily.vercel.app",
-    repoUrl: "https://github.com/gyo82v/jade-lily",
-    type: "website"
+    id: "color-scheme-generator",
+    titleKey: "Color Scheme Generator",
+    descKey: "projects.colorScheme.description",
+    techKeys: ["React-vite", "Tailwind"],
+    image: "src/images/color-scheme.png",
+    imageAltKey: "projects.colorScheme.imageAlt",
+    liveUrl: "https://colorschemegenerator09.netlify.app/",
+    repoUrl: "https://github.com/gyo82v/scrimba-color-scheme-generator"
   },
   {
-    id: "NexTill",
-    titleKey: "pages.home.projects.nexTill.title",
-    descKey: "pages.home.projects.nexTill.description",
-    techKeys: ["React-vite", "Firebase", "Tailwind"],
-    image: "src/images/laptop.png",
-    imageAltKey: "pages.home.projects.chefMistral.imageAlt",
-    liveUrl: "https://friendly-moonbeam-f330df.netlify.app/",
-    repoUrl: "https://github.com/yourusername/chef-mistral",
-    type: "game"
+    id: "plant-blog",
+    titleKey: "Plant blog",
+    descKey: "projects.plantBlog.description",
+    techKeys: ["React-vite", "Tailwind"],
+    image: "src/images/plant-blog.jpg",
+    imageAltKey: "projects.plantBlog.imageAlt",
+    liveUrl: "https://plantblog09.netlify.app/",
+    repoUrl: "https://github.com/gyo82v/react-plant-blog"
   },
   {
-    id: "Arcadium",
-    titleKey: "pages.home.projects.arcadium.title",
-    descKey: "pages.home.projects.arcadium.description",
-    techKeys: ["React-vite", "Tailwind", "Firebase"],
+    id: "Unit converter",
+    titleKey: "Unit converter",
+    descKey: "projects.unitConverter.description",
+    techKeys: ["React-vite", "Tailwind"],
+    image: "src/images/unit-converter2.png",
+    imageAltKey: "projects.unitConverter.imageAlt",
+    liveUrl: "https://unitconverter09.netlify.app/",
+    repoUrl: "https://github.com/gyo82v/scrimba-unit-converter"
+  },
+  {
+    id: "Travel journal",
+    titleKey: "Travel Journal",
+    descKey: "projects.travelJournal.description",
+    techKeys: ["React-vite", "Tailwind"],
     image: "src/images/arcadium.jpg",
-    imageAltKey: "pages.home.projects.arcadium.imageAlt",
-    liveUrl: "https://resonant-starship-25cd8f.netlify.app/",
-    repoUrl: "https://github.com/yourusername/battleship",
-    type: "ai"
-  }
+    imageAltKey: "projects.travelJournal.imageAlt",
+    liveUrl: "https://traveljournal09.netlify.app/",
+    repoUrl: "https://github.com/gyo82v/react-travel-journal"
+  },
+  {
+    id: "Scoreboard",
+    titleKey: "Scoreboard",
+    descKey: "projects.scoreboard.description",
+    techKeys: ["React-vite", "Tailwind"],
+    image: "src/images/scoreboard.png",
+    imageAltKey: "projects.scoreboard.imageAlt",
+    liveUrl: "https://scoreboard09.netlify.app/",
+    repoUrl: "https://github.com/gyo82v/scrimba-scoreboard"
+  },
+
 ];
