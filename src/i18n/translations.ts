@@ -31,6 +31,40 @@ export const translations: Record<Lang, NestedStrings> = {
       close: "Close",
       certificateViewerAria: "Certificate viewer"
     },
+    projects: {
+      jadeLily: {
+        description: "An e-commerce demo site showcasing product pages and a cart — deployed on Vercel.",
+        imageAlt: "Screenshot of the jade Lily app"
+      },
+      nexTill: {
+        description: "lorem ipso sum",
+        imageAlt: "Screenshot nextTill project"
+      },
+      arcadium: {
+        description: "lorem ipso sum",
+        imageAlt: "Screenshot of arcadium app"
+      },
+      colorScheme: {
+        description: "Generate harmonious color palettes by choosing a base color and styles like monochrome, analogic, or complementary schemes.",
+        imageAlt: "Screenshot of the color scheme app"
+      },
+      plantBlog: {
+        description: "A simple and clean blog featuring articles about houseplants, care tips, and inspiration for indoor plant lovers.",
+        imageAlt: "Screenshot of the plant blob website"
+      },
+      unitConverter: {
+        description: "Convert common units easily, including meters and feet, liters and gallons, or kilograms and pounds.",
+        imageAlt: "Screenshot of the unit converter app"
+      },
+      travelJournal: {
+        description: "A personal travel journal showcasing visited destinations, travel memories, and a wishlist of future places to explore.",
+        imageAlt: "Screenshot of the travel journal wep page"
+      },
+      scoreboard: {
+        description: "A simple and interactive scoreboard that lets users set a timer and add or subtract points easily.",
+        imageAlt: "Screenshot of the scoreboard app"
+      }
+    },
     footer : {
       subtitle: "Available for freelance work and new opportunities",
       emailAria: "Send me an email",
@@ -68,24 +102,6 @@ export const translations: Record<Lang, NestedStrings> = {
           sectionSubtitle: "Selected projects — quick overview and links",
           viewLive: "View live",
           viewRepo: "View repo",
-          jadeLily : {
-            title : "Jade Lily",
-            description : "An e-commerce demo site showcasing product pages and a cart — deployed on Vercel.",
-            imageAlt : "Screenshot of Jade Lily project"
-
-          },
-          nexTill : {
-            title : "NexTill",
-            description : "A browser implementation of the classic Battleship game with a small AI.",
-            imageAlt : "Screenshot nextTill project"
-
-          },
-          arcadium : {
-            title: "Arcadium",
-            description : "A recipe PWA for creating and sharing food recipes with offline support.",
-            imageAlt : "Screenshot of chef mistral project"
-
-          }
         }
       },
       resume: {
@@ -153,7 +169,34 @@ export const translations: Record<Lang, NestedStrings> = {
         note: "If you’d like a longer CV or references, please contact me."
       },
       projects: {
-        title: "Projects",
+        title: "Projects I’ve built",
+        kicker: "Selected work",
+        description: "A collection of projects that reflect my approach to frontend development — from real-world applications to smaller experiments focused on learning, performance, and clean design.",
+        featured: {
+          title: "Featured projects",
+          description: "These are the projects I consider most representative of my skills and the way I approach building real-world applications."
+        },
+        other: {
+          title: "Other projects",
+          description: "Additional projects, experiments, and smaller applications that helped me explore new ideas, tools, and techniques."
+        },
+        closing: {
+          kicker: "Looking ahead",
+          title: "Building, learning, and refining my craft",
+          description: "These projects represent my current journey as a developer. I’m always refining my skills, exploring new technologies, and improving how I design and build user-focused applications.",
+          card1: {
+            title: "Development approach",
+            description: "I focus on clean architecture, reusable components, and maintainable code, aiming for clarity and scalability from the start."
+          },
+          card2: {
+            title: "What I enjoy building",
+            description: "User-focused interfaces, interactive experiences, and applications where design and functionality work closely together."
+          },
+          card3: {
+            title: "What’s next",
+            description: "I’m continuing to deepen my frontend skills while exploring new tools and patterns to build more robust and engaging applications."
+          }
+        }
       },
     },
   },
@@ -181,6 +224,40 @@ export const translations: Record<Lang, NestedStrings> = {
       downloadCertificateA11y: "Scarica certificato",
       close: "Chiudi",
       certificateViewerAria: "Visualizzatore certificato"
+    },
+     projects: {
+      jadeLily: {
+        description: "An e-commerce demo site showcasing product pages and a cart — deployed on Vercel.",
+        imageAlt: "Screenshot of the jade Lily app"
+      },
+      nexTill: {
+        description: "lorem ipso sum",
+        imageAlt: "Screenshot nextTill project"
+      },
+      arcadium: {
+        description: "lorem ipso sum",
+        imageAlt: "Screenshot of arcadium app"
+      },
+      colorScheme: {
+        description: "Genera palette di colori armoniose scegliendo un colore base e stili come monocromatico, analogico o complementare.",
+        imageAlt: "Screenshot della color scheme app"
+      },
+      plantBlog: {
+        description: "Un blog semplice e pulito con articoli sulle piante da appartamento, consigli di cura e ispirazione.",
+        imageAlt: "Screenshot del plant blob website"
+      },
+      unitConverter: {
+        description: "Converti facilmente unità comuni come metri e piedi, litri e galloni, o chilogrammi e libbre.",
+        imageAlt: "Screenshot della unit converter app"
+      },
+      travelJournal: {
+        description: "Un diario di viaggio personale che mostra destinazioni visitate, ricordi di viaggio e una wishlist di luoghi futuri.",
+        imageAlt: "Screenshot  della travel journal wep page"
+      },
+      scoreboard: {
+        description: "Un tabellone semplice e interattivo che permette di impostare un timer e aggiungere o sottrarre punti.",
+        imageAlt: "Screenshot della scoreboard app"
+      }
     },
     footer: {
       subtitle: "Disponibile per collaborazioni freelance e nuove opportunità",
@@ -220,25 +297,7 @@ export const translations: Record<Lang, NestedStrings> = {
           sectionTitle: "Progetti",
           sectionSubtitle: "Progetti selezionati — panoramica e link",
           viewLive: "Vedi live",
-          viewRepo: "Vedi repo",
-          jadeLily : {
-            title: "Jade Lily",
-            description : "Un sito demo e-commerce con pagine prodotto e carrello — distribuito su Vercel.",
-            imageAlt : "Screenshot del progetto Jade Lily"
-
-          },
-          nexTill : {
-            title : "NextTill",
-            description : "Una versione browser del classico gioco Battleship con una piccola IA.",
-            imageAlt : "Screenshot del progetto nextTill"
-
-          },
-          arcadium : {
-            title : "Arcadium",
-            description : "Una PWA per ricette per creare e condividere ricette con supporto offline.",
-            imageAlt : "Screenshot del progetto chef Mistral"
-
-          }
+          viewRepo: "Vedi repo"    
         }
       },
       resume: {
@@ -305,7 +364,34 @@ export const translations: Record<Lang, NestedStrings> = {
     note: "Se desideri un CV più dettagliato o referenze, contattami."
   },
       projects: {
-        title: "Progetti",
+        title: "Progetti che ho realizzato",
+        kicker: "Progetti selezionati",
+        description: "Una raccolta di progetti che riflettono il mio approccio allo sviluppo frontend — da applicazioni reali a progetti più piccoli, pensati per sperimentare, imparare e curare design e performance.",
+        featured: {
+          title: "Progetti principali",
+          description: "Questi sono i progetti che considero più rappresentativi delle mie competenze e del mio modo di affrontare lo sviluppo di applicazioni reali."
+        },
+        other: {
+          title: "Altri progetti",
+          description: "Altri progetti, esperimenti e applicazioni più piccole che mi hanno permesso di esplorare nuove idee, strumenti e tecniche."
+        },
+        closing: {
+          kicker: "Guardando avanti",
+          title: "Continuare a costruire, imparare e migliorare il mio lavoro",
+          description: "Questi progetti rappresentano il mio percorso attuale come sviluppatore. Cerco costantemente di migliorare le mie competenze, esplorare nuove tecnologie e costruire applicazioni sempre più curate e orientate all’utente.",
+          card1: {
+            title: "Approccio allo sviluppo",
+            description: "Mi concentro su architetture pulite, componenti riutilizzabili e codice manutenibile, puntando fin dall’inizio a chiarezza e scalabilità."
+          },
+          card2: {
+            title: "Cosa mi piace costruire",
+            description: "Interfacce orientate all’utente, esperienze interattive e applicazioni in cui design e funzionalità lavorano in armonia."
+          },
+          card3: {
+            title: "I prossimi passi",
+            description: "Sto continuando a consolidare le mie competenze frontend ed esplorare nuovi strumenti e pattern per creare applicazioni sempre più solide e coinvolgenti."
+          }
+        }
       },
     },
   },
