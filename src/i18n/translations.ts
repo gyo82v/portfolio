@@ -63,6 +63,26 @@ export const translations: Record<Lang, NestedStrings> = {
       scoreboard: {
         description: "A simple and interactive scoreboard that lets users set a timer and add or subtract points easily.",
         imageAlt: "Screenshot of the scoreboard app"
+      },
+      photosGrid: {
+        description: "A responsive grid showcasing a collection of photos with different sizes and proportions, optimized for mobile and desktop.",
+        imageAlt: "Screenshot of the photos grid app"
+      },
+      passwordGenerator: {
+        description: "Generate two strong random passwords instantly, with the ability to copy and use them securely.",
+        imageAlt: "Screenshot of password generator app"
+      },
+      movieWatchList: {
+        description: "Search movies from a large database and save your favorites to a personal watchlist for later viewing.",
+        imageAlt: "Screenshot of movie watchlist app"
+      },
+       catsMeme: {
+        description: "Select an emotion and display a random cat meme that matches the chosen mood.",
+        imageAlt: "Screenshot of cats meme app"
+      },
+      printforge: {
+        description: "A 3D printing showcase that displays different models and simulates a professional website for a 3D printing service.",
+        imageAlt: "Screenshot di printforge app"
       }
     },
     footer : {
@@ -257,6 +277,26 @@ export const translations: Record<Lang, NestedStrings> = {
       scoreboard: {
         description: "Un tabellone semplice e interattivo che permette di impostare un timer e aggiungere o sottrarre punti.",
         imageAlt: "Screenshot della scoreboard app"
+      },
+      photosGrid: {
+        description: "Una griglia responsive che mostra una collezione di foto di diverse dimensioni, ottimizzata per mobile e desktop.",
+        imageAlt: "Screenshot di photos grid app"
+      },
+      passwordGenerator: {
+        description: "Genera due password casuali e sicure istantaneamente, con possibilità di copiarle e utilizzarle facilmente.",
+        imageAlt: "Screenshot di password generator app"
+      },
+       movieWatchList: {
+        description: "Cerca film in un ampio database e salva i preferiti in una watchlist personale per la visione futura.",
+        imageAlt: "Screenshot di movie watchlist app"
+      },
+      catsMeme: {
+        description: "Seleziona un’emozione e visualizza un meme di gatti casuale che corrisponde all’umore scelto.",
+        imageAlt: "Screenshot di cats meme app"
+      },
+      printforge: {
+        description: "Una vetrina sulla stampa 3D che mostra diversi modelli e simula un sito professionale per servizi di stampa 3D.",
+        imageAlt: "Screenshot di printforge app"
       }
     },
     footer: {
