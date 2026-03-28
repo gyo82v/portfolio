@@ -92,13 +92,13 @@ export const smallProjects: ProjectDataType[] = [
     repoUrl: "https://github.com/gyo82v/scrimba-cat-meme"
   },
    {
-    id: "Unit converter",
-    titleKey: "Unit converter",
-    descKey: "projects.unitConverter.description",
+    id: "Learning-journal",
+    titleKey: "Learning journal",
+    descKey: "projects.learningJournal.description",
     techKeys: ["React-vite", "Tailwind"],
-    image: "src/images/unit-converter2.png",
-    imageAltKey: "projects.unitConverter.imageAlt",
-    liveUrl: "https://unitconverter09.netlify.app/",
-    repoUrl: "https://github.com/gyo82v/scrimba-unit-converter"
+    image: "src/images/learning-journal.webp",
+    imageAltKey: "projects.learningJournal.imageAlt",
+    liveUrl: "https://learningjournal09.netlify.app/",
+    repoUrl: "https://github.com/gyo82v/scrimba-learning-journal"
   },
 ];
