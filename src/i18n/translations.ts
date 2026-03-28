@@ -52,9 +52,9 @@ export const translations: Record<Lang, NestedStrings> = {
         description: "A simple and clean blog featuring articles about houseplants, care tips, and inspiration for indoor plant lovers.",
         imageAlt: "Screenshot of the plant blob website"
       },
-      unitConverter: {
-        description: "Convert common units easily, including meters and feet, liters and gallons, or kilograms and pounds.",
-        imageAlt: "Screenshot of the unit converter app"
+      learningJournal: {
+        description: "A blog-style website simulation featuring multiple posts that document learning progress, reflections, and educational topics.",
+        imageAlt: "Screenshot of the learning journal blog "
       },
       travelJournal: {
         description: "A personal travel journal showcasing visited destinations, travel memories, and a wishlist of future places to explore.",
@@ -72,7 +72,7 @@ export const translations: Record<Lang, NestedStrings> = {
         description: "Generate two strong random passwords instantly, with the ability to copy and use them securely.",
         imageAlt: "Screenshot of password generator app"
       },
-      movieWatchList: {
+      movieWatchlist: {
         description: "Search movies from a large database and save your favorites to a personal watchlist for later viewing.",
         imageAlt: "Screenshot of movie watchlist app"
       },
@@ -266,8 +266,8 @@ export const translations: Record<Lang, NestedStrings> = {
         description: "Un blog semplice e pulito con articoli sulle piante da appartamento, consigli di cura e ispirazione.",
         imageAlt: "Screenshot del plant blob website"
       },
-      unitConverter: {
-        description: "Converti facilmente unità comuni come metri e piedi, litri e galloni, o chilogrammi e libbre.",
+      learningJournal: {
+        description: "Una simulazione di sito blog con numerosi articoli che documentano il percorso di apprendimento e riflessioni personali.",
         imageAlt: "Screenshot della unit converter app"
       },
       travelJournal: {
@@ -286,7 +286,7 @@ export const translations: Record<Lang, NestedStrings> = {
         description: "Genera due password casuali e sicure istantaneamente, con possibilità di copiarle e utilizzarle facilmente.",
         imageAlt: "Screenshot di password generator app"
       },
-       movieWatchList: {
+       movieWatchlist: {
         description: "Cerca film in un ampio database e salva i preferiti in una watchlist personale per la visione futura.",
         imageAlt: "Screenshot di movie watchlist app"
       },
