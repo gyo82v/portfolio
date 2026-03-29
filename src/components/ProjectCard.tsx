@@ -1,9 +1,9 @@
 import { useLanguage } from "../i18n/useLanguage";
-import type { ProjectData } from "../data/projects";
+import type { ProjectDataType } from "../types/dataTypes";
 import { focusEffects, transitions } from "../styles/patterns";
 import Pill from "./elements/Pill";
 
-export default function ProjectCard({ project }: { project: ProjectData }) {
+export default function ProjectCard({ project }: { project: ProjectDataType }) {
   const { t } = useLanguage();
 
   return (
