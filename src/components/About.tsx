@@ -15,9 +15,9 @@ export default function About() {
     <section
       id="about"
       aria-labelledby="about-title"
-      className="py-20 bg-slate-50 dark:bg-slate-800 transition-colors duration-200 "
+      className="py-6 bg-slate-50 dark:bg-slate-800 transition-colors duration-200 "
     >
-      <div className="max-w-5xl mx-auto px-6 ">
+      <div className="max-w-6xl mx-auto px-6 ">
         <header className="mb-8 text-center  ">
           <h2 id="about-title" className="text-2xl sm:text-3xl font-extrabold">
             {t("pages.home.about.title")}
@@ -28,7 +28,7 @@ export default function About() {
         </header>
 
         <div className="flex flex-col gap-8 ">
-          <div className=" text-slate-700 dark:text-slate-200 my-2 md:my-4 ">
+          <div className=" text-slate-700 dark:text-slate-200 my-4 lg:my-6 md:my-4 ">
             <p className="prose prose-sm sm:prose-base dark:prose-invert max-w-none text-center">
               {t("pages.home.about.description1")}
               <span className="text-teal-500 font-semibold">Next.js</span>,{" "}
@@ -43,11 +43,11 @@ export default function About() {
 
           <div className="flex flex-col gap-10 md:flex-row">
             <AboutSection title="pages.home.about.certsTitle">
-              <CertificatesList certificates={certificates} />
+              <CertificatesList certificates={certificates} className="lg:py-6" />
             </AboutSection>
             <AboutSection title="pages.home.about.skillsTitle">
               <div className="flex flex-col gap-6 justify-between h-full">
-              <ul className="flex flex-wrap gap-2 md:gap-3 md:mt-5" aria-label={t("pages.home.about.skillsTitle")}>
+              <ul className="flex flex-wrap gap-2 md:gap-3 lg:gap-5 md:mt-5" aria-label={t("pages.home.about.skillsTitle")}>
                 {skills.map((skill) => (
                   <li key={skill}>
                     <Pill className={`md:text-sm md:px-6 md:py-3 `}>

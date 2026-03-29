@@ -6,11 +6,12 @@
 - [Style] [Header] improve the hover effects on the icons for language and darkmode;
 - [Content] [resume] add a pdf resume file to the portfolio, add download and display links
                      in the resume page instead of the home and projects links;
-- [Style] [Homepage] improve the layout spacing in the homepage, add divider if necessary;
-- [Style] [Homepage] improve the bg colors of the contact component in the homepage;
-- [Style] [ProjectCard] improve the style of the projects cards of both homepage and projects page;
+- [✅] {Style}{Homepage} improve the layout spacing in the homepage, add divider if necessary;
+- [✅] {style}{Homepage} improve the bg colors of the contact component in the homepage;
+- [✅] {Style} {ProjectCard} improve the style of the projects cards of both homepage and projects page;
 - [Content] find other projects to add instead of scoreboard, cat meme and psw generator;
 - [Content] [Optional] find a better font for the all app and add a secondary font for niche use;
-- [Style] [Optional] check if for the header and footer is better to add a different bg color;
+- [Style] [Optional] check if for the header and footer is better to add a different bg color or create
+                     a bigger divider for header and footer;
 - [Test] use lighthouse to test the app;
 - [Tset] check the three scrimba example to see for additional improvement;

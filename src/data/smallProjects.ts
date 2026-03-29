@@ -45,7 +45,7 @@ export const smallProjects: ProjectDataType[] = [
     id: "Movie-watchlist",
     titleKey: "Movie Watchlist",
     descKey: "projects.movieWatchlist.description",
-    techKeys: ["React-vite", "Tailwind", "Firebase", "REST API"],
+    techKeys: ["React-vite", "Firebase", "REST API"],
     image: "src/images/movie-watchlist.png",
     imageAltKey: "projects.movieWatchlist.imageAlt",
     liveUrl: "https://moviewatchlist09.netlify.app/",

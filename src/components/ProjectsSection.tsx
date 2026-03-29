@@ -6,9 +6,9 @@ export default function ProjectsSection() {
   const { t } = useLanguage();
 
   return (
-    <section id="projects" aria-label={t("projects.sectionAria")} className="py-20 bg-transparent">
-      <div className="max-w-6xl mx-auto px-6">
-        <header className="mb-8 text-center md:text-left">
+    <section id="projects" aria-label={t("projects.sectionAria")} className="py-6 bg-transparent">
+      <div className="max-w-7xl mx-auto px-6">
+        <header className="mb-8 lg:mb-12 text-center md:text-left">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-slate-100">
             {t("pages.home.projects.sectionTitle")}
           </h2>

@@ -9,7 +9,7 @@ export default function Contact({ email = "gyo82v@gmail.com" }: {email?: string}
     <section
       id="contact"
       aria-labelledby="contact-title"
-      className="py-20 bg-white dark:bg-slate-900 transition-colors duration-200"
+      className="pb-20 pt-6  transition-colors duration-200"
     >
       <div className="max-w-3xl mx-auto px-6 text-center">
         <h2
