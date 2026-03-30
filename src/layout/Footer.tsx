@@ -8,7 +8,9 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 transition-colors duration-200">
+    <footer className="relative bg-slate-50 dark:bg-slate-800 transition-colors duration-200">
+      <div aria-hidden="true" className="absolute top-0 left-0 h-px w-full bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-600 to-transparent" />
+      <div aria-hidden="true" className="absolute top-0 left-1/2 h-3 w-64 -translate-x-1/2 bg-[var(--accent)]/10 blur-2xl" />
       <div className="mx-auto w-full px-6 py-8 lg:px-8">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div>
