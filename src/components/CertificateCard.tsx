@@ -23,7 +23,7 @@ export default function CertificateCard({ certificate, onView, className }: Prop
       aria-labelledby={`cert-${certificate.id}-title`}
     >
       <div className="flex-2 flex flex-col items-center justify-center  md:flex-2 ">
-        <h3 id={`cert-${certificate.id}-title`} className="text-sm text-center font-semibold text-slate-900 dark:text-slate-100">
+        <h3 id={`cert-${certificate.id}-title`} className="text-sm font-secondary text-center font-semibold text-slate-900 dark:text-slate-100">
           {certificate.title}
         </h3>
         <p 

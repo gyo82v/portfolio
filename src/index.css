@@ -11,7 +11,7 @@
     --accent: theme('colors.teal.600');
     --accent-foreground: theme('colors.teal.400');
 
-    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
   }
@@ -51,6 +51,9 @@
   :where(.dark) :root {
     /* If you want to use CSS variables for accents; requires using style attr where needed */
     --accent: theme('colors.teal.400');
+  }
+  .font-secondary {
+    font-family: 'Space Grotesk', system-ui, Avenir, Helvetica, Arial, sans-serif;    
   }
   .bg-accent { background-color: var(--accent); }
   .text-accent { color: var(--accent); }

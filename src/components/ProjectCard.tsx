@@ -30,10 +30,10 @@ export default function ProjectCard({ project }: { project: ProjectDataType }) {
           />
         </div>
 
-        <div className="flex flex-1 flex-col p-4 sm:p-5">
+        <div className="flex flex-1 flex-col p-4 sm:p-5 ">
           <h3
             id={`${project.id}-title`}
-            className="text-lg font-semibold tracking-tight text-slate-900 dark:text-slate-100"
+            className="text-lg font-semibold font-secondary tracking-tight text-slate-900 dark:text-slate-100"
           >
             {t(project.titleKey)}
           </h3>
