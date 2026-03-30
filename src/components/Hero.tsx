@@ -1,34 +1,67 @@
 import { useLanguage } from "../i18n/useLanguage";
-
-export default function Hero({ imageSrc = "/images/profile.jpg"}) {
+export default function Hero() {
   const { t } = useLanguage();
 
   return (
-    <section id="home" aria-label={t("hero.ariaLabel")} className="py-16 bg-slate-50 dark:bg-slate-800 transition-colors duration-200">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Grid: image left / text right on md+, stacked on mobile */}
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
-          {/* Left: portrait */}
-          <div className="flex justify-center md:justify-start order-1">
-            <img
-              src={imageSrc}
-              alt={t("hero.imageAlt")}
-              className="w-56 h-56 md:w-72 md:h-72 rounded-full object-cover shadow-lg ring-1 ring-slate-200 dark:ring-slate-700"
-            />
-          </div>
+<section
+  id="home"
+  aria-label={t("hero.ariaLabel")}
+  className="relative bg-slate-50 dark:bg-slate-800 transition-colors duration-200"
+>
+  <div className="px-6 pt-16 pb-8 md:py-16 ">
+    <div
+      className={`mx-auto flex flex-col items-center md:gap-4
+                  md:grid md:w-min md:gap-x-4`}
+      style={{
+        gridTemplateAreas: `"img title" "img subtitle"`,
+        gridTemplateColumns: "min-content max-content",
+      }}
+    >
+      {/* Title */}
+      <h1
+        className={` text-center md:text-left text-4xl
+                     sm:text-5xl  leading-tight
+                   text-slate-900 dark:text-slate-100`}
+        style={{ gridArea: "title" }}
+      >
+        <span className="block text-3xl md:text-5xl font-light text-slate-600 dark:text-slate-400 ">
+          {t("pages.home.hero.title")}
+        </span>
+        <span className="block text-slate-700 dark:text-slate-200 font-semibold ">
+          Giorgio Valle
+        </span>
+      </h1>
+      <div
+  aria-hidden="true"
+  className="md:hidden flex items-center justify-center gap-2 my-3"
+>
+  <span className="h-px w-6 bg-slate-300 dark:bg-slate-600" />
+  <span className="w-1 h-1 rounded-full bg-slate-400 dark:bg-slate-500" />
+  <span className="h-px w-6 bg-slate-300 dark:bg-slate-600" />
+</div>
 
-          {/* Right: text */}
-          <div className="text-center md:text-left order-2">
-            <h1 className="text-3xl sm:text-4xl font-extrabold leading-tight text-slate-900 dark:text-slate-100">
-              {t("pages.home.hero.title")} <strong className="text-teal-500"> Giorgio Valle</strong>
-            </h1>
+      {/* Subtitle / description */}
+      <p
+        className={`inline-block text-center md:text-right text-sm md:text-lg sm:text-xl md:bg-teal-500
+                  md:text-slate-100 px-6 pt-1 pb-8 md:py-4 md:shadow-lg z-0          
+                    md:col-start-1 md:col-end-3 md:row-start-2 md:self-start md:relative
+                    md:-left-80 md:w-[calc(100%+20rem)]`}
+        style={{ gridArea: "subtitle" }}
+      >
+        Front-end Developer
+      </p>
 
-            <p className="mt-3 text-lg sm:text-xl text-slate-600 dark:text-slate-300">
-              {t("pages.home.hero.description")}
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+      {/* Image */}
+      <img
+        src="src/images/profile.png"
+        alt={t("hero.imageAlt")}
+        className={`w-56 h-56 md:min-w-[260px] md:h-[260px] object-cover
+                    shadow-2xl relative z-10 mr-1`}
+        style={{ gridArea: "img" }}
+      />
+    </div>
+  </div>
+</section>
   );
 }
+
