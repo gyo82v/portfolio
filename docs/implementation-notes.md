@@ -13,5 +13,5 @@
 - [✅] {Content}{Optional} find a better font for the all app and add a secondary font for niche use;
 - [✅] {Style}{Optional} check if for the header and footer is better to add a different bg color or create
         a bigger divider for header and footer;
-- [Test] use lighthouse to test the app;
+- [✅] {Test} use lighthouse to test the app;
 - [✅] {Test} check the three scrimba example to see for additional improvement;
