@@ -6,7 +6,7 @@ export const smallProjects: ProjectDataType[] = [
     titleKey: "Printforge",
     descKey: "projects.printforge.description",
     techKeys: ["Next.js", "Tailwind"],
-    image: "src/images/printforge2.webp",
+    image: "assets/images/printforge2.webp",
     imageAltKey: "projects.printforge.imageAlt",
     liveUrl: "https://next-printforge-mocha.vercel.app/",
     repoUrl: "https://github.com/gyo82v/next-printforge"
@@ -16,7 +16,7 @@ export const smallProjects: ProjectDataType[] = [
     titleKey: "Plant blog",
     descKey: "projects.plantBlog.description",
     techKeys: ["React-vite", "Tailwind"],
-    image: "src/images/plant-blog.webp",
+    image: "assets/images/plant-blog.webp",
     imageAltKey: "projects.plantBlog.imageAlt",
     liveUrl: "https://plantblog09.netlify.app/",
     repoUrl: "https://github.com/gyo82v/react-plant-blog"
@@ -26,7 +26,7 @@ export const smallProjects: ProjectDataType[] = [
     titleKey: "Travel Journal",
     descKey: "projects.travelJournal.description",
     techKeys: ["React-vite", "Tailwind"],
-    image: "src/images/arcadium.webp",
+    image: "assets/images/travel-journal.webp",
     imageAltKey: "projects.travelJournal.imageAlt",
     liveUrl: "https://traveljournal09.netlify.app/",
     repoUrl: "https://github.com/gyo82v/react-travel-journal"
@@ -36,7 +36,7 @@ export const smallProjects: ProjectDataType[] = [
     titleKey: "Photos Grid",
     descKey: "projects.photosGrid.description",
     techKeys: ["React-vite", "Tailwind"],
-    image: "src/images/photos-grid.webp",
+    image: "assets/images/photos-grid.webp",
     imageAltKey: "projects.photosGrid.imageAlt",
     liveUrl: "https://photosgrid09.netlify.app/",
     repoUrl: "https://github.com/gyo82v/scrimba-pictures-grid"
@@ -46,7 +46,7 @@ export const smallProjects: ProjectDataType[] = [
     titleKey: "Movie Watchlist",
     descKey: "projects.movieWatchlist.description",
     techKeys: ["React-vite", "Firebase", "REST API"],
-    image: "src/images/movie-watchlist.webp",
+    image: "assets/images/movie-watchlist.webp",
     imageAltKey: "projects.movieWatchlist.imageAlt",
     liveUrl: "https://moviewatchlist09.netlify.app/",
     repoUrl: "https://github.com/gyo82v/scrimba-movie-watchlist"
@@ -56,7 +56,7 @@ export const smallProjects: ProjectDataType[] = [
     titleKey: "Color Scheme Generator",
     descKey: "projects.colorScheme.description",
     techKeys: ["React-vite", "Tailwind"],
-    image: "src/images/color-scheme.webp",
+    image: "assets/images/color-scheme.webp",
     imageAltKey: "projects.colorScheme.imageAlt",
     liveUrl: "https://colorschemegenerator09.netlify.app/",
     repoUrl: "https://github.com/gyo82v/scrimba-color-scheme-generator"
@@ -66,7 +66,7 @@ export const smallProjects: ProjectDataType[] = [
     titleKey: "Scoreboard",
     descKey: "projects.scoreboard.description",
     techKeys: ["React-vite", "Tailwind"],
-    image: "src/images/scoreboard.webp",
+    image: "assets/images/scoreboard.webp",
     imageAltKey: "projects.scoreboard.imageAlt",
     liveUrl: "https://scoreboard09.netlify.app/",
     repoUrl: "https://github.com/gyo82v/scrimba-scoreboard"
@@ -76,7 +76,7 @@ export const smallProjects: ProjectDataType[] = [
     titleKey: "Password Generator",
     descKey: "projects.passwordGenerator.description",
     techKeys: ["React-vite", "Tailwind"],
-    image: "src/images/password-generator.webp",
+    image: "assets/images/password-generator.webp",
     imageAltKey: "projects.passwordGenerator.imageAlt",
     liveUrl: "https://passwordgenerator009.netlify.app/",
     repoUrl: "https://github.com/gyo82v/scrimba-password-generator"
@@ -86,7 +86,7 @@ export const smallProjects: ProjectDataType[] = [
     titleKey: "Cats meme",
     descKey: "projects.catsMeme.description",
     techKeys: ["React-vite", "Tailwind"],
-    image: "src/images/cat-meme.webp",
+    image: "assets/images/cat-meme.webp",
     imageAltKey: "projects.catsMeme.imageAlt",
     liveUrl: "https://catmeme09.netlify.app/",
     repoUrl: "https://github.com/gyo82v/scrimba-cat-meme"
@@ -96,7 +96,7 @@ export const smallProjects: ProjectDataType[] = [
     titleKey: "Learning journal",
     descKey: "projects.learningJournal.description",
     techKeys: ["React-vite", "Tailwind"],
-    image: "src/images/learning-journal.webp",
+    image: "assets/images/learning-journal.webp",
     imageAltKey: "projects.learningJournal.imageAlt",
     liveUrl: "https://learningjournal09.netlify.app/",
     repoUrl: "https://github.com/gyo82v/scrimba-learning-journal"
