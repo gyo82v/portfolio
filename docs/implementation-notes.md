@@ -14,4 +14,4 @@
 - [✅] {Style}{Optional} check if for the header and footer is better to add a different bg color or create
         a bigger divider for header and footer;
 - [Test] use lighthouse to test the app;
-- [Tset] check the three scrimba example to see for additional improvement;
+- [✅] {Test} check the three scrimba example to see for additional improvement;

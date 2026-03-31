@@ -102,6 +102,8 @@ export default function Header() {
             className={`flex items-center gap-2 px-2 py-1 rounded-md border
                         transition-colors duration-200 hover:bg-slate-900/5 dark:hover:bg-white/10 
                         ${focusEffects}`}
+            aria-label={lang === "en" ? t("lang.switchToItalian") : t("lang.switchToEnglish")}
+            title={ lang === "en" ? t("lang.switchToItalian") : t("lang.switchToEnglish") }
           >
             <FaGlobe className="w-4 h-4" />
             <span className="text-sm font-medium">{lang === "en" ? "EN" : "IT"}</span>
@@ -112,6 +114,8 @@ export default function Header() {
             className={`p-2 rounded-md transition-colors duration-200
                         hover:bg-slate-900/5 dark:hover:bg-white/10  
                         ${focusEffects}`}
+            aria-label={theme === "dark" ? t("theme.switchToLight") : t("theme.switchToDark")}
+            title={theme === "dark" ? t("theme.switchToLight") : t("theme.switchToDark")}
           >
             {theme === "dark" ? <FiSun /> : <FiMoon />}
           </button>

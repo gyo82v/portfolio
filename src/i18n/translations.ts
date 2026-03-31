@@ -22,6 +22,8 @@ export const translations: Record<Lang, NestedStrings> = {
       en: "English",
       it: "Italiano",
       ariaToggle: "Toggle language",
+      switchToItalian: "Switch to Italian",
+      switchToEnglish: "Switch to English"
     },
     resume : {
       view: "View",
@@ -236,6 +238,8 @@ export const translations: Record<Lang, NestedStrings> = {
       en: "English",
       it: "Italiano",
       ariaToggle: "Cambia lingua",
+      switchToItalian: "Passa a Italiano",
+      switchToEnglish: "Passa a inglese"
     },
     resume : {
       view: "Visualizza",
