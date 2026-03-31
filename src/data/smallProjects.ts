@@ -26,7 +26,7 @@ export const smallProjects: ProjectDataType[] = [
     titleKey: "Travel Journal",
     descKey: "projects.travelJournal.description",
     techKeys: ["React-vite", "Tailwind"],
-    image: "assets/images/travel-journal.webp",
+    image: "assets/images/arcadium.webp",
     imageAltKey: "projects.travelJournal.imageAlt",
     liveUrl: "https://traveljournal09.netlify.app/",
     repoUrl: "https://github.com/gyo82v/react-travel-journal"
