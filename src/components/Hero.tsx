@@ -43,7 +43,7 @@ export default function Hero() {
       {/* Subtitle / description */}
       <p
         className={`inline-block text-center md:text-right text-sm md:text-lg sm:text-xl md:bg-teal-500
-                  md:text-slate-100 px-6 pt-1 pb-8 md:py-4 md:shadow-lg z-0          
+                  md:text-teal-950 px-6 pt-1 pb-8 md:py-4 md:shadow-lg z-0          
                     md:col-start-1 md:col-end-3 md:row-start-2 md:self-start md:relative
                     md:-left-80 md:w-[calc(100%+20rem)]`}
         style={{ gridArea: "subtitle" }}

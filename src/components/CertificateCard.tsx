@@ -37,7 +37,7 @@ export default function CertificateCard({ certificate, onView, className }: Prop
           onClick={() => onView(certificate)}
           className={` w-full
             inline-flex items-center justify-center gap-1
-            px-3 py-2 rounded-md text-sm bg-[var(--accent)] text-white
+            px-3 py-2 rounded-md text-sm bg-[var(--accent)] text-slate-900
             ${transitions} ${focusEffects} hover:scale-105 active:scale-95
           `}
           aria-label={t("resume.viewCertificate")}

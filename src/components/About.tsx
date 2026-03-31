@@ -31,12 +31,12 @@ export default function About() {
           <div className=" text-slate-700 dark:text-slate-200 my-4 lg:my-6 md:my-4 ">
             <p className="prose prose-sm sm:prose-base dark:prose-invert max-w-none text-center">
               {t("pages.home.about.description1")}
-              <span className="text-teal-500 font-semibold">Next.js</span>,{" "}
-              <span className="text-teal-500 font-semibold">TypeScript</span>,{" "}
-              <span className="text-teal-500 font-semibold">React-vite</span>,{" "}
-              <span className="text-teal-500 font-semibold">Tailwind CSS</span>
+              <span className="dark:text-teal-500 text-teal-700  font-semibold">Next.js</span>,{" "}
+              <span className="dark:text-teal-500 text-teal-700 font-semibold">TypeScript</span>,{" "}
+              <span className="dark:text-teal-500 text-teal-700 font-semibold">React-vite</span>,{" "}
+              <span className="dark:text-teal-500 text-teal-700 font-semibold">Tailwind CSS</span>
               {t("pages.home.about.description2")}
-              <span className="text-teal-500 font-semibold">Firebase</span>
+              <span className="dark:text-teal-500 text-teal-700 font-semibold">Firebase</span>
               {t("pages.home.about.description3")}
             </p>
           </div>
@@ -62,7 +62,7 @@ export default function About() {
                   to="resume"
                   className={`
                     inline-flex items-center justify-center w-full px-4 py-2 rounded-lg
-                    bg-[var(--accent)] text-white font-medium
+                    bg-[var(--accent)] text-slate-900 font-medium
                     ${transitions} ${focusEffects}
                     hover:scale-102 active:scale-95 
                   `}
