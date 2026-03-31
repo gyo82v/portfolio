@@ -6,7 +6,7 @@ export const smallProjects: ProjectDataType[] = [
     titleKey: "Printforge",
     descKey: "projects.printforge.description",
     techKeys: ["Next.js", "Tailwind"],
-    image: "src/images/printforge2.png",
+    image: "src/images/printforge2.webp",
     imageAltKey: "projects.printforge.imageAlt",
     liveUrl: "https://next-printforge-mocha.vercel.app/",
     repoUrl: "https://github.com/gyo82v/next-printforge"
@@ -16,7 +16,7 @@ export const smallProjects: ProjectDataType[] = [
     titleKey: "Plant blog",
     descKey: "projects.plantBlog.description",
     techKeys: ["React-vite", "Tailwind"],
-    image: "src/images/plant-blog.jpg",
+    image: "src/images/plant-blog.webp",
     imageAltKey: "projects.plantBlog.imageAlt",
     liveUrl: "https://plantblog09.netlify.app/",
     repoUrl: "https://github.com/gyo82v/react-plant-blog"
@@ -26,7 +26,7 @@ export const smallProjects: ProjectDataType[] = [
     titleKey: "Travel Journal",
     descKey: "projects.travelJournal.description",
     techKeys: ["React-vite", "Tailwind"],
-    image: "src/images/arcadium.jpg",
+    image: "src/images/arcadium.webp",
     imageAltKey: "projects.travelJournal.imageAlt",
     liveUrl: "https://traveljournal09.netlify.app/",
     repoUrl: "https://github.com/gyo82v/react-travel-journal"
@@ -36,7 +36,7 @@ export const smallProjects: ProjectDataType[] = [
     titleKey: "Photos Grid",
     descKey: "projects.photosGrid.description",
     techKeys: ["React-vite", "Tailwind"],
-    image: "src/images/photos-grid.png",
+    image: "src/images/photos-grid.webp",
     imageAltKey: "projects.photosGrid.imageAlt",
     liveUrl: "https://photosgrid09.netlify.app/",
     repoUrl: "https://github.com/gyo82v/scrimba-pictures-grid"
@@ -46,7 +46,7 @@ export const smallProjects: ProjectDataType[] = [
     titleKey: "Movie Watchlist",
     descKey: "projects.movieWatchlist.description",
     techKeys: ["React-vite", "Firebase", "REST API"],
-    image: "src/images/movie-watchlist.png",
+    image: "src/images/movie-watchlist.webp",
     imageAltKey: "projects.movieWatchlist.imageAlt",
     liveUrl: "https://moviewatchlist09.netlify.app/",
     repoUrl: "https://github.com/gyo82v/scrimba-movie-watchlist"
@@ -56,7 +56,7 @@ export const smallProjects: ProjectDataType[] = [
     titleKey: "Color Scheme Generator",
     descKey: "projects.colorScheme.description",
     techKeys: ["React-vite", "Tailwind"],
-    image: "src/images/color-scheme.png",
+    image: "src/images/color-scheme.webp",
     imageAltKey: "projects.colorScheme.imageAlt",
     liveUrl: "https://colorschemegenerator09.netlify.app/",
     repoUrl: "https://github.com/gyo82v/scrimba-color-scheme-generator"
@@ -66,7 +66,7 @@ export const smallProjects: ProjectDataType[] = [
     titleKey: "Scoreboard",
     descKey: "projects.scoreboard.description",
     techKeys: ["React-vite", "Tailwind"],
-    image: "src/images/scoreboard.png",
+    image: "src/images/scoreboard.webp",
     imageAltKey: "projects.scoreboard.imageAlt",
     liveUrl: "https://scoreboard09.netlify.app/",
     repoUrl: "https://github.com/gyo82v/scrimba-scoreboard"
@@ -76,7 +76,7 @@ export const smallProjects: ProjectDataType[] = [
     titleKey: "Password Generator",
     descKey: "projects.passwordGenerator.description",
     techKeys: ["React-vite", "Tailwind"],
-    image: "src/images/password-generator.png",
+    image: "src/images/password-generator.webp",
     imageAltKey: "projects.passwordGenerator.imageAlt",
     liveUrl: "https://passwordgenerator009.netlify.app/",
     repoUrl: "https://github.com/gyo82v/scrimba-password-generator"
@@ -86,7 +86,7 @@ export const smallProjects: ProjectDataType[] = [
     titleKey: "Cats meme",
     descKey: "projects.catsMeme.description",
     techKeys: ["React-vite", "Tailwind"],
-    image: "src/images/cat-meme.png",
+    image: "src/images/cat-meme.webp",
     imageAltKey: "projects.catsMeme.imageAlt",
     liveUrl: "https://catmeme09.netlify.app/",
     repoUrl: "https://github.com/gyo82v/scrimba-cat-meme"

@@ -53,7 +53,7 @@ export default function Hero() {
 
       {/* Image */}
       <img
-        src="src/images/profile.png"
+        src="src/images/profile.webp"
         alt={t("hero.imageAlt")}
         className={`w-56 h-56 md:min-w-[260px] md:h-[260px] object-cover
                     shadow-2xl relative z-10 mr-1`}
