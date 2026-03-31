@@ -53,7 +53,7 @@ export default function Hero() {
 
       {/* Image */}
       <img
-        src="src/images/profile.webp"
+        src="assets/images/profile.webp"
         alt={t("hero.imageAlt")}
         className={`w-56 h-56 md:min-w-[260px] md:h-[260px] object-cover
                     shadow-2xl relative z-10 mr-1`}
@@ -64,4 +64,14 @@ export default function Hero() {
 </section>
   );
 }
+
+/*
+<link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+
+
+*/
 
