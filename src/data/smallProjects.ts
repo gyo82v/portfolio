@@ -82,14 +82,14 @@ export const smallProjects: ProjectDataType[] = [
     repoUrl: "https://github.com/gyo82v/scrimba-password-generator"
   },
   {
-    id: "cat-meme",
-    titleKey: "Cats meme",
-    descKey: "projects.catsMeme.description",
-    techKeys: ["React-vite", "Tailwind"],
-    image: "assets/images/cat-meme.webp",
-    imageAltKey: "projects.catsMeme.imageAlt",
-    liveUrl: "https://catmeme09.netlify.app/",
-    repoUrl: "https://github.com/gyo82v/scrimba-cat-meme"
+    id: "quizz-rush",
+    titleKey: "Quizz Rush",
+    descKey: "projects.quizzRush.description",
+    techKeys: ["React-vite", "Tailwind", "REST API"],
+    image: "assets/images/quizz-rush.webp",
+    imageAltKey: "projects.quizzRush.imageAlt",
+    liveUrl: "https://quizz009.netlify.app/",
+    repoUrl: "https://github.com/gyo82v/scrimba-quizz"
   },
    {
     id: "Learning-journal",

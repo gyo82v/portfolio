@@ -78,9 +78,9 @@ export const translations: Record<Lang, NestedStrings> = {
         description: "Search movies from a large database and save your favorites to a personal watchlist for later viewing.",
         imageAlt: "Screenshot of movie watchlist app"
       },
-       catsMeme: {
-        description: "Select an emotion and display a random cat meme that matches the chosen mood.",
-        imageAlt: "Screenshot of cats meme app"
+       quizzRush: {
+        description: "A fast quiz game with random questions, instant scoring, and a fresh round every time.",
+        imageAlt: "Screenshot of quizz rush app"
       },
       printforge: {
         description: "A 3D printing showcase that displays different models and simulates a professional website for a 3D printing service.",
@@ -294,9 +294,9 @@ export const translations: Record<Lang, NestedStrings> = {
         description: "Cerca film in un ampio database e salva i preferiti in una watchlist personale per la visione futura.",
         imageAlt: "Screenshot di movie watchlist app"
       },
-      catsMeme: {
-        description: "Seleziona un’emozione e visualizza un meme di gatti casuale che corrisponde all’umore scelto.",
-        imageAlt: "Screenshot di cats meme app"
+      quizzRush: {
+        description: "Un quiz veloce con domande casuali, punteggio immediato e una nuova sfida ogni volta.",
+        imageAlt: "Screenshot di quizz rush app"
       },
       printforge: {
         description: "Una vetrina sulla stampa 3D che mostra diversi modelli e simula un sito professionale per servizi di stampa 3D.",
