@@ -5,11 +5,31 @@ export const smallProjects: ProjectDataType[] = [
     id: "printforge",
     titleKey: "Printforge",
     descKey: "projects.printforge.description",
-    techKeys: ["Next.js", "Tailwind"],
+    techKeys: ["Next.js", "Tailwind", "Vercel"],
     image: "assets/images/printforge2.webp",
     imageAltKey: "projects.printforge.imageAlt",
     liveUrl: "https://next-printforge-mocha.vercel.app/",
     repoUrl: "https://github.com/gyo82v/next-printforge"
+  },
+   {
+    id: "ai-recipe",
+    titleKey: "Ai Chef",
+    descKey: "projects.aiRecipe.description",
+    techKeys: ["Next.js", "OpenAI API", "Vercel"],
+    image: "assets/images/ai-recipe.webp",
+    imageAltKey: "projects.aiRecipe.imageAlt",
+    liveUrl: "https://ai-recipe-mu.vercel.app/",
+    repoUrl: "https://github.com/gyo82v/ai-recipe"
+  },
+   {
+    id: "quizz-rush",
+    titleKey: "Quizz Rush",
+    descKey: "projects.quizzRush.description",
+    techKeys: ["React-vite", "Tailwind", "REST API"],
+    image: "assets/images/quizz-rush.webp",
+    imageAltKey: "projects.quizzRush.imageAlt",
+    liveUrl: "https://quizz009.netlify.app/",
+    repoUrl: "https://github.com/gyo82v/scrimba-quizz"
   },
   {
     id: "plant-blog",
@@ -60,36 +80,6 @@ export const smallProjects: ProjectDataType[] = [
     imageAltKey: "projects.colorScheme.imageAlt",
     liveUrl: "https://colorschemegenerator09.netlify.app/",
     repoUrl: "https://github.com/gyo82v/scrimba-color-scheme-generator"
-  },
-  {
-    id: "Scoreboard",
-    titleKey: "Scoreboard",
-    descKey: "projects.scoreboard.description",
-    techKeys: ["React-vite", "Tailwind"],
-    image: "assets/images/scoreboard.webp",
-    imageAltKey: "projects.scoreboard.imageAlt",
-    liveUrl: "https://scoreboard09.netlify.app/",
-    repoUrl: "https://github.com/gyo82v/scrimba-scoreboard"
-  },
-  {
-    id: "Password-generator",
-    titleKey: "Password Generator",
-    descKey: "projects.passwordGenerator.description",
-    techKeys: ["React-vite", "Tailwind"],
-    image: "assets/images/password-generator.webp",
-    imageAltKey: "projects.passwordGenerator.imageAlt",
-    liveUrl: "https://passwordgenerator009.netlify.app/",
-    repoUrl: "https://github.com/gyo82v/scrimba-password-generator"
-  },
-  {
-    id: "quizz-rush",
-    titleKey: "Quizz Rush",
-    descKey: "projects.quizzRush.description",
-    techKeys: ["React-vite", "Tailwind", "REST API"],
-    image: "assets/images/quizz-rush.webp",
-    imageAltKey: "projects.quizzRush.imageAlt",
-    liveUrl: "https://quizz009.netlify.app/",
-    repoUrl: "https://github.com/gyo82v/scrimba-quizz"
   },
    {
     id: "Learning-journal",

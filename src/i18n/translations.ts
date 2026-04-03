@@ -47,7 +47,7 @@ export const translations: Record<Lang, NestedStrings> = {
         imageAlt: "Screenshot of arcadium app"
       },
       colorScheme: {
-        description: "Generate harmonious color palettes by choosing a base color and styles like monochrome, analogic, or complementary schemes.",
+        description: "Generate harmonious color palettes by choosing a base color and styles like monochrome or complementary schemes.",
         imageAlt: "Screenshot of the color scheme app"
       },
       plantBlog: {
@@ -62,17 +62,13 @@ export const translations: Record<Lang, NestedStrings> = {
         description: "A personal travel journal showcasing visited destinations, travel memories, and a wishlist of future places to explore.",
         imageAlt: "Screenshot of the travel journal wep page"
       },
-      scoreboard: {
-        description: "A simple and interactive scoreboard that lets users set a timer and add or subtract points easily.",
-        imageAlt: "Screenshot of the scoreboard app"
-      },
       photosGrid: {
         description: "A responsive grid showcasing a collection of photos with different sizes and proportions, optimized for mobile and desktop.",
         imageAlt: "Screenshot of the photos grid app"
       },
-      passwordGenerator: {
-        description: "Generate two strong random passwords instantly, with the ability to copy and use them securely.",
-        imageAlt: "Screenshot of password generator app"
+      aiRecipe: {
+        description: "AI-powered recipe app where users add ingredients and instantly generate creative, personalized recipes.",
+        imageAlt: "Screenshot of ai recipe app"
       },
       movieWatchlist: {
         description: "Search movies from a large database and save your favorites to a personal watchlist for later viewing.",
@@ -278,17 +274,13 @@ export const translations: Record<Lang, NestedStrings> = {
         description: "Un diario di viaggio personale che mostra destinazioni visitate, ricordi di viaggio e una wishlist di luoghi futuri.",
         imageAlt: "Screenshot  della travel journal wep page"
       },
-      scoreboard: {
-        description: "Un tabellone semplice e interattivo che permette di impostare un timer e aggiungere o sottrarre punti.",
-        imageAlt: "Screenshot della scoreboard app"
-      },
       photosGrid: {
         description: "Una griglia responsive che mostra una collezione di foto di diverse dimensioni, ottimizzata per mobile e desktop.",
         imageAlt: "Screenshot di photos grid app"
       },
-      passwordGenerator: {
-        description: "Genera due password casuali e sicure istantaneamente, con possibilità di copiarle e utilizzarle facilmente.",
-        imageAlt: "Screenshot di password generator app"
+      aiRecipe: {
+        description: "App di ricette basata su AI che genera ricette personalizzate partendo dagli ingredienti inseriti dall’utente.",
+        imageAlt: "Screenshot di ai recipe app"
       },
        movieWatchlist: {
         description: "Cerca film in un ampio database e salva i preferiti in una watchlist personale per la visione futura.",
