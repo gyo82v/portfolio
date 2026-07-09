@@ -39,7 +39,7 @@ export const translations: Record<Lang, NestedStrings> = {
         imageAlt: "Screenshot of the jade Lily app"
       },
       nexTill: {
-        description: "lorem ipso sum",
+        description: "A modern POS application for managing orders, payments, daily sales, and restaurant operations efficiently.",
         imageAlt: "Screenshot nextTill project"
       },
       arcadium: {
@@ -251,7 +251,7 @@ export const translations: Record<Lang, NestedStrings> = {
         imageAlt: "Screenshot of the jade Lily app"
       },
       nexTill: {
-        description: "lorem ipso sum",
+        description: "Una moderna applicazione POS per gestire ordini, pagamenti, vendite giornaliere e operazioni del ristorante.",
         imageAlt: "Screenshot nextTill project"
       },
       arcadium: {

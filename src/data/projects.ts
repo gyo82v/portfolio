@@ -15,11 +15,11 @@ export const projects: ProjectDataType[] = [
     id: "NexTill",
     titleKey: "NexTill",
     descKey: "projects.nexTill.description",
-    techKeys: ["React-vite", "Firebase", "Tailwind"],
+    techKeys: ["Next.js", "Firebase", "Tailwind"],
     image: "assets/images/laptop.webp",
-    imageAltKey: "projects.chefMistral.imageAlt",
-    liveUrl: "https://friendly-moonbeam-f330df.netlify.app/",
-    repoUrl: "https://github.com/yourusername/chef-mistral"
+    imageAltKey: "projects.nexTill.imageAlt",
+    liveUrl: "https://nextill-app.vercel.app",
+    repoUrl: "https://github.com/gyo82v/nextill"
   },
   {
     id: "Arcadium",
